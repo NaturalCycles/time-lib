@@ -441,15 +441,15 @@
     glob-to-regexp "^0.3.0"
 
 "@naturalcycles/dev-lib@^7.6.0":
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/@naturalcycles/dev-lib/-/dev-lib-7.6.0.tgz#483a942d2ed248398ffc8fb5b5b50e4ff88f0b2d"
-  integrity sha512-pgS1HlfidPM04DKjP9rMrfSqTEq8FR8AnZJTZ1A73AttsA5FmzOT4bIhyf5i43AQtbUlQbBrk2FToUTqzU0fDA==
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/@naturalcycles/dev-lib/-/dev-lib-7.8.0.tgz#5db3e1134d533c076c4c410badd95cb0f164d94e"
+  integrity sha512-HRNGWSG8QzXlsurOKjgl7h8k+FEwOHsEXjPbgZlw4DyZD3wQ6sQY89bP4vKKQ2Xa7p6yWJ+1/VZSxYvxnuandQ==
   dependencies:
     "@commitlint/cli" "^7.6.1"
     "@commitlint/config-conventional" "^7.6.0"
     "@naturalcycles/fs-lib" "^2.0.0"
     "@naturalcycles/js-lib" "^6.1.0"
-    "@types/fs-extra" "^5.0.4"
+    "@types/fs-extra" "^7.0.0"
     "@types/jest" "^24.0.6"
     "@types/node" "^12.0.0"
     "@types/yargs" "^13.0.0"
@@ -502,6 +502,11 @@
     "@semantic-release/changelog" "^3.0.1"
     "@semantic-release/git" "^7.0.5"
     semantic-release "^15.10.8"
+
+"@naturalcycles/test-lib@^1.0.0":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@naturalcycles/test-lib/-/test-lib-1.0.2.tgz#de4d0873ac37317d1c274fb2196d585210dede9a"
+  integrity sha512-/O8sXfEPNq//zvbCjUzBBFP/9ug9UAlSN2ij9+1ZeK5d4YKP+EKW57LoSqLvVvqTtOpFITWkbioRF/BSAFwkRA==
 
 "@nodelib/fs.stat@^1.1.2":
   version "1.1.3"
@@ -701,10 +706,10 @@
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
   integrity sha512-EaObqwIvayI5a8dCzhFrjKzVwKLxjoG9T6Ppd5CEo07LRKfQ8Yokw54r5+Wq7FaBQ+yXRvQAYPrHwya1/UFt9g==
 
-"@types/fs-extra@^5.0.4":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-5.1.0.tgz#2a325ef97901504a3828718c390d34b8426a10a1"
-  integrity sha512-AInn5+UBFIK9FK5xc9yP5e3TQSPNNgjHByqYcj9g5elVBnDQcQL7PlO1CIRy2gWlbwK7UPYqi7vRvFA44dCmYQ==
+"@types/fs-extra@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-7.0.0.tgz#9c4ad9e1339e7448a76698829def1f159c1b636c"
+  integrity sha512-ndoMMbGyuToTy4qB6Lex/inR98nPiNHacsgMPvy+zqMLgSxbt8VtWpDArpGp69h1fEDQHn1KB+9DWD++wgbwYA==
   dependencies:
     "@types/node" "*"
 
@@ -1890,6 +1895,11 @@ dateformat@^3.0.0:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
   integrity sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==
+
+dayjs@^1.8.14:
+  version "1.8.14"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.14.tgz#43e4f62830c2c3342c3fcd25934dc9162dbe6f38"
+  integrity sha512-AVhDmRTe541iWirnoeFSSDDGvCT6HWaNQ4z2WmmzXMGZj6ph6ydao2teKq/eUtR43GPJXlYFD+C/SotG1P9wUQ==
 
 debug@3.1.0:
   version "3.1.0"
