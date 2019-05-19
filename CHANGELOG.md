@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/NaturalCycles/time-lib/compare/v1.0.1...v1.0.2) (2019-05-19)
+
+
+### Bug Fixes
+
+* exporting utc plugin ([abc6d1d](https://github.com/NaturalCycles/time-lib/commit/abc6d1d))
+
 ## [1.0.1](https://github.com/NaturalCycles/time-lib/compare/v1.0.0...v1.0.1) (2019-05-19)
 
 
