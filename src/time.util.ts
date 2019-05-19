@@ -1,4 +1,5 @@
 import dayjs = require('dayjs')
+import 'dayjs'
 import utc = require('dayjs/plugin/utc')
 import 'dayjs/plugin/utc'
 import { dayjsPlugins } from './dayjs.plugins'
