@@ -1,5 +1,6 @@
 import dayjs = require('dayjs')
 import utc = require('dayjs/plugin/utc')
+import 'dayjs/plugin/utc'
 import { dayjsPlugins } from './dayjs.plugins'
 dayjs.extend(utc)
 dayjs.extend(dayjsPlugins)
