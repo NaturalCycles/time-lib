@@ -4,6 +4,9 @@ import { dayjsPlugins } from './dayjs.plugins'
 dayjs.extend(utc)
 dayjs.extend(dayjsPlugins)
 
+// export modified dayjs
+export { dayjs }
+
 export const DAYJS_2018_06_21 = dayjs('2018-06-21')
 
 export function nowUnix (): number {
