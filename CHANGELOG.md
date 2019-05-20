@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/NaturalCycles/time-lib/compare/v1.0.3...v1.1.0) (2019-05-20)
+
+
+### Features
+
+* days.toCompactTime(seconds?: boolean) ([941abaa](https://github.com/NaturalCycles/time-lib/commit/941abaa))
+
 ## [1.0.3](https://github.com/NaturalCycles/time-lib/compare/v1.0.2...v1.0.3) (2019-05-19)
 
 
