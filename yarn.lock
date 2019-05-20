@@ -441,14 +441,14 @@
     glob-to-regexp "^0.3.0"
 
 "@naturalcycles/dev-lib@^7.6.0":
-  version "7.8.0"
-  resolved "https://registry.yarnpkg.com/@naturalcycles/dev-lib/-/dev-lib-7.8.0.tgz#5db3e1134d533c076c4c410badd95cb0f164d94e"
-  integrity sha512-HRNGWSG8QzXlsurOKjgl7h8k+FEwOHsEXjPbgZlw4DyZD3wQ6sQY89bP4vKKQ2Xa7p6yWJ+1/VZSxYvxnuandQ==
+  version "7.9.0"
+  resolved "https://registry.yarnpkg.com/@naturalcycles/dev-lib/-/dev-lib-7.9.0.tgz#b1cd3192a5f5ed4356f2ffcd8e62448724d74874"
+  integrity sha512-ok9SViqIkGhYb5JEI0O1AEjDvGunx89D8uOQbmwqMYnf7GwF3Y/rqBuEZJwei5f3zssV8HVGGd6LU5FSFxFKgQ==
   dependencies:
     "@commitlint/cli" "^7.6.1"
     "@commitlint/config-conventional" "^7.6.0"
     "@naturalcycles/fs-lib" "^2.0.0"
-    "@naturalcycles/js-lib" "^6.1.0"
+    "@naturalcycles/js-lib" "^7.0.0"
     "@types/fs-extra" "^7.0.0"
     "@types/jest" "^24.0.6"
     "@types/node" "^12.0.0"
@@ -482,12 +482,10 @@
     move-file "^1.2.0"
     yargs "^13.2.2"
 
-"@naturalcycles/js-lib@^6.1.0":
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/@naturalcycles/js-lib/-/js-lib-6.1.0.tgz#d49731c08d9dda2339009a435372ffc1cc4c76e2"
-  integrity sha512-oinDX6J0h/2v6J+HISj3iz1QJmmkRzCZabv8OgdOpAZ3KSojaGDF+yLzVYHt0nEpiQiC79YkmNmK+eLZl1fwiA==
-  dependencies:
-    "@types/luxon" "^1.12.0"
+"@naturalcycles/js-lib@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@naturalcycles/js-lib/-/js-lib-7.0.0.tgz#f9b4f8ea7b20fafa8e1256d38ee67678fc69a899"
+  integrity sha512-cnnO3xM7xNKPjTHzBiuWzdkQSEx07xQpJVi0g+5beJg1W3KTbEZJTWQVLEaKQfmrWnLa+gatSAKxB5ZWhtZGxQ==
 
 "@naturalcycles/promise-lib@^2.1.2":
   version "2.2.0"
@@ -753,11 +751,6 @@
   integrity sha512-3m6RPnO35r7Dg+uMLj1+xfZaOgIHHHut61djNjzwExXN4/Pm9has9C6I1KMYSfz7mahDhWUOVg4HW/nZdv5Pww==
   dependencies:
     "@types/jest-diff" "*"
-
-"@types/luxon@^1.12.0":
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-1.13.0.tgz#e92338702d0b1b96e8d5ea6fe39d9938891aacd0"
-  integrity sha512-XmDiRVoJWgVdqX9x1a/GU4p9bSgZY7q8SOyMLs3fx1AdQcxLYAPIt/jfZm2e+PBVRWuEx1FqYNJ37kBZ53TMqA==
 
 "@types/minimatch@*":
   version "3.0.3"
@@ -1767,9 +1760,9 @@ copy-descriptor@^0.1.0:
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
 core-js@^2.4.0, core-js@^2.5.0:
-  version "2.6.5"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.5.tgz#44bc8d249e7fb2ff5d00e0341a7ffb94fbf67895"
-  integrity sha512-klh/kDpwX8hryYL14M9w/xei6vrv6sE8gTHDG7/T/+SEovB/G4ejwcfE/CBzO6Edsu+OETZMZ3wcX/EjUkrl5A==
+  version "2.6.6"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.6.tgz#00eb6d6bf815471cc16d8563edd7d38786dec50b"
+  integrity sha512-Mt/LaAym54NXnrjEMdo918cT2h70tqb/Yl7T3uPHQHRm5SxVoqlKmerUy4mL11k8saSBDWQ7ULIHxmeFyT3pfg==
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
@@ -7078,9 +7071,9 @@ typescript@^3.4.5:
   integrity sha512-YycBxUb49UUhdNMU5aJ7z5Ej2XGmaIBL0x34vZ82fn3hGvD+bgrMrVDpatgz2f7YxUMJxMkbWxJZeAvDxVe7Vw==
 
 uglify-js@^3.1.4:
-  version "3.5.13"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.5.13.tgz#d2d8857b598d77f8764ae3bfcf90bb1df134d2bd"
-  integrity sha512-Lho+IJlquX6sdJgyKSJx/M9y4XbDd3ekPjD8S6HYmT5yVSwDtlSuca2w5hV4g2dIsp0Y/4orbfWxKexodmFv7w==
+  version "3.5.14"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.5.14.tgz#edf2a322c37fd7173a954fb35af199b52fb10946"
+  integrity sha512-dgyjIw8KFK6AyVl5vm2tEqPewv5TKGEiiVFLI1LbF+oHua/Njd8tZk3lIbF1AWU1rNdEg7scaceADb4zqCcWXg==
   dependencies:
     commander "~2.20.0"
     source-map "~0.6.1"

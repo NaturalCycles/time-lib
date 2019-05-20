@@ -70,3 +70,9 @@ test('toPretty', () => {
   expect(dayjs().toPretty()).toBe('2018-06-21 00:00:00')
   expect(dayjs('2017-03-14').toPretty()).toBe('2017-03-14 00:00:00')
 })
+
+test('toCompactTime', () => {
+  expect(DAYJS_2018_06_21.toCompactTime()).toBe('20180621_0000')
+  expect(DAYJS_2018_06_21.toCompactTime(false)).toBe('20180621_0000')
+  expect(DAYJS_2018_06_21.toCompactTime(true)).toBe('20180621_000000')
+})
