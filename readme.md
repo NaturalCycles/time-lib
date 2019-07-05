@@ -7,6 +7,9 @@
 
 # Features
 
+- Plugins
+  - default
+  - isoWeekday
 - ...
 
 # Packaging

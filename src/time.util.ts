@@ -1,27 +1,4 @@
-import dayjs = require('dayjs')
-import 'dayjs'
-import utc = require('dayjs/plugin/utc')
-import 'dayjs/plugin/utc'
-import { dayjsPlugins } from './dayjs.plugins'
-dayjs.extend(utc)
-dayjs.extend(dayjsPlugins)
-
-// export modified dayjs
-export { dayjs }
-
-export const DAYJS_2018_06_21 = dayjs('2018-06-21')
-
-export function nowUnix (): number {
-  return dayjs().unix()
-}
-
-export function nowPretty (): string {
-  return dayjs().toPretty()
-}
-
-export function todayIso (): string {
-  return dayjs().toISODate()
-}
+export const TS_2018_06_21 = 1529539200
 
 /**
  * Returns time passed since `from` until `until` (default to Date.now())
