@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/NaturalCycles/time-lib/compare/v1.1.0...v1.2.0) (2019-07-05)
+
+
+### Features
+
+* refactor, bundle more plugins by default ([206c010](https://github.com/NaturalCycles/time-lib/commit/206c010))
+
 # [1.1.0](https://github.com/NaturalCycles/time-lib/compare/v1.0.3...v1.1.0) (2019-05-20)
 
 
