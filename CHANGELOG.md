@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/NaturalCycles/time-lib/compare/v1.2.0...v1.2.1) (2019-07-05)
+
+
+### Bug Fixes
+
+* export Dayjs interface ([df441f7](https://github.com/NaturalCycles/time-lib/commit/df441f7))
+
 # [1.2.0](https://github.com/NaturalCycles/time-lib/compare/v1.1.0...v1.2.0) (2019-07-05)
 
 
