@@ -25,12 +25,12 @@ declare module 'dayjs' {
     /**
      * Forbid the method in favor of .toISODate()
      */
-    toISOString (): never
+    // toISOString (): never
 
     /**
      * Forbid the method in favor of .unixMillis()
      */
-    valueOf (): never
+    // valueOf (): never
   }
 }
 
