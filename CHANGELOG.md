@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/NaturalCycles/time-lib/compare/v1.2.1...v1.3.0) (2019-07-09)
+
+
+### Features
+
+* include weekOfYear plugin ([61f07ae](https://github.com/NaturalCycles/time-lib/commit/61f07ae))
+
 ## [1.2.1](https://github.com/NaturalCycles/time-lib/compare/v1.2.0...v1.2.1) (2019-07-05)
 
 
