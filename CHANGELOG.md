@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/NaturalCycles/time-lib/compare/v1.3.0...v1.4.0) (2019-07-12)
+
+
+### Features
+
+* .isoWeekday setter ([d6367e0](https://github.com/NaturalCycles/time-lib/commit/d6367e0))
+
 # [1.3.0](https://github.com/NaturalCycles/time-lib/compare/v1.2.1...v1.3.0) (2019-07-09)
 
 
