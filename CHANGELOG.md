@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/NaturalCycles/time-lib/compare/v1.4.1...v1.4.2) (2019-08-01)
+
+
+### Bug Fixes
+
+* ts issue ([8c05cde](https://github.com/NaturalCycles/time-lib/commit/8c05cde))
+
 ## [1.4.1](https://github.com/NaturalCycles/time-lib/compare/v1.4.0...v1.4.1) (2019-08-01)
 
 
