@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/NaturalCycles/time-lib/compare/v1.4.0...v1.4.1) (2019-08-01)
+
+
+### Bug Fixes
+
+* .week() now supports weekStart 0 (us) and 1 (iso) ([1d0022e](https://github.com/NaturalCycles/time-lib/commit/1d0022e))
+
 # [1.4.0](https://github.com/NaturalCycles/time-lib/compare/v1.3.0...v1.4.0) (2019-07-12)
 
 
