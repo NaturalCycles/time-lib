@@ -27,6 +27,7 @@ import 'dayjs/plugin/utc'
 import './plugin/default'
 import './plugin/isoWeekday'
 import './plugin/localeData'
+import './plugin/weekOfYear'
 
 // Default weekStart to Monday
 dayjs.extendLocale({
