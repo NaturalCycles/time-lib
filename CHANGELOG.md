@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/NaturalCycles/time-lib/compare/v1.4.2...v1.4.3) (2019-08-09)
+
+
+### Bug Fixes
+
+* target=es2015 to fix '{...' in Safari < 12 ([52de62f](https://github.com/NaturalCycles/time-lib/commit/52de62f))
+
 ## [1.4.2](https://github.com/NaturalCycles/time-lib/compare/v1.4.1...v1.4.2) (2019-08-01)
 
 
