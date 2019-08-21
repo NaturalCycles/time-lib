@@ -23,6 +23,11 @@ declare module 'dayjs' {
     unixMillis (): number
 
     /**
+     * Shortcut for .startOf('day')
+     */
+    today (): Dayjs
+
+    /**
      * Forbid the method in favor of .toISODate()
      */
     // toISOString (): never
@@ -40,19 +45,23 @@ export const DAYJS_COMPACT_TIME = 'YYYYMMDD_HHmm'
 export const DAYJS_COMPACT_TIME_SECONDS = 'YYYYMMDD_HHmmss'
 
 export const defaultPlugins: PluginFunc = (_opt, dayjsClass, _dayjsFactory) => {
-  dayjsClass.prototype.toISODate = function (this: Dayjs) {
+  dayjsClass.prototype.toISODate = function (this: Dayjs): string {
     return this.format(DAYJS_ISO_DATE)
   }
 
-  dayjsClass.prototype.toPretty = function (this: Dayjs) {
+  dayjsClass.prototype.toPretty = function (this: Dayjs): string {
     return this.format(DAYJS_PRETTY_TIME)
   }
 
-  dayjsClass.prototype.toCompactTime = function (this: Dayjs, seconds = false) {
+  dayjsClass.prototype.toCompactTime = function (this: Dayjs, seconds = false): string {
     return this.format(seconds ? DAYJS_COMPACT_TIME_SECONDS : DAYJS_COMPACT_TIME)
   }
 
-  dayjsClass.prototype.unixMillis = function (this: Dayjs) {
+  dayjsClass.prototype.unixMillis = function (this: Dayjs): number {
     return this.valueOf()
+  }
+
+  dayjsClass.prototype.today = function (this: Dayjs): Dayjs {
+    return this.startOf('day')
   }
 }
