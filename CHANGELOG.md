@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/NaturalCycles/time-lib/compare/v1.4.3...v1.5.0) (2019-08-21)
+
+
+### Features
+
+* dayjs().today() as alias to .startOf('day') ([b091ccc](https://github.com/NaturalCycles/time-lib/commit/b091ccc))
+
 ## [1.4.3](https://github.com/NaturalCycles/time-lib/compare/v1.4.2...v1.4.3) (2019-08-09)
 
 
