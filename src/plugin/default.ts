@@ -5,27 +5,27 @@ declare module 'dayjs' {
     /**
      * Returns ISO date, e.g `2018-06-21`
      */
-    toISODate (): string
+    toISODate(): string
 
     /**
      * Returns e.g `2018-06-21 17:54:21`
      */
-    toPretty (): string
+    toPretty(): string
 
     /**
      * Returns e.g `20180621_1754` or `20180621_175404` (with seconds).
      */
-    toCompactTime (seconds?: boolean): string
+    toCompactTime(seconds?: boolean): string
 
     /**
      * Returns unixtime in milliseconds.
      */
-    unixMillis (): number
+    unixMillis(): number
 
     /**
      * Shortcut for .startOf('day')
      */
-    today (): Dayjs
+    today(): Dayjs
 
     /**
      * Forbid the method in favor of .toISODate()
@@ -45,23 +45,23 @@ export const DAYJS_COMPACT_TIME = 'YYYYMMDD_HHmm'
 export const DAYJS_COMPACT_TIME_SECONDS = 'YYYYMMDD_HHmmss'
 
 export const defaultPlugins: PluginFunc = (_opt, dayjsClass, _dayjsFactory) => {
-  dayjsClass.prototype.toISODate = function (this: Dayjs): string {
+  dayjsClass.prototype.toISODate = function(this: Dayjs): string {
     return this.format(DAYJS_ISO_DATE)
   }
 
-  dayjsClass.prototype.toPretty = function (this: Dayjs): string {
+  dayjsClass.prototype.toPretty = function(this: Dayjs): string {
     return this.format(DAYJS_PRETTY_TIME)
   }
 
-  dayjsClass.prototype.toCompactTime = function (this: Dayjs, seconds = false): string {
+  dayjsClass.prototype.toCompactTime = function(this: Dayjs, seconds = false): string {
     return this.format(seconds ? DAYJS_COMPACT_TIME_SECONDS : DAYJS_COMPACT_TIME)
   }
 
-  dayjsClass.prototype.unixMillis = function (this: Dayjs): number {
+  dayjsClass.prototype.unixMillis = function(this: Dayjs): number {
     return this.valueOf()
   }
 
-  dayjsClass.prototype.today = function (this: Dayjs): Dayjs {
+  dayjsClass.prototype.today = function(this: Dayjs): Dayjs {
     return this.startOf('day')
   }
 }

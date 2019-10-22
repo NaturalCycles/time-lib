@@ -5,7 +5,7 @@ declare module 'dayjs' {
     /**
      * Returns iso week number (where week starts on Monday)
      */
-    week (): number
+    week(): number
 
     /**
      * Set date to NEXT date that satisfies the week number.
@@ -15,7 +15,7 @@ declare module 'dayjs' {
 }
 
 export const weekOfYearPlugin: PluginFunc = (_opt, dayjsClass, dayjs) => {
-  dayjsClass.prototype.week = function (this: Dayjs) {
+  dayjsClass.prototype.week = function(this: Dayjs) {
     const weekStart = this.$locale().weekStart || 0
 
     if (weekStart === 1) {

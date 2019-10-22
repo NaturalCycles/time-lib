@@ -15,13 +15,13 @@ declare module 'dayjs' {
     /**
      * Returns internal locale data
      */
-    $locale (): DayjsLocale
+    $locale(): DayjsLocale
   }
 
-  export function extendLocale (ext: Partial<DayjsLocale>): void
+  export function extendLocale(ext: Partial<DayjsLocale>): void
 }
 
-;(dayjs as any).extendLocale = function (ext: any) {
+;(dayjs as any).extendLocale = function(ext: any) {
   dayjs.locale({
     ...dayjs().$locale(),
     ...ext,

@@ -8,17 +8,17 @@ declare module 'dayjs' {
      * 6: Saturday
      * 7: Sunday
      */
-    isoWeekday (): number
+    isoWeekday(): number
 
     /**
      * Set date to NEXT date that satisfies the weekday.
      */
-    isoWeekday (setWeekday: number): this
+    isoWeekday(setWeekday: number): this
   }
 }
 
 export const isoWeekdayPlugin: PluginFunc = (_opt, dayjsClass) => {
-  dayjsClass.prototype.isoWeekday = function (this: Dayjs, setWeekday?: number) {
+  dayjsClass.prototype.isoWeekday = function(this: Dayjs, setWeekday?: number) {
     const { $W } = this as any
     const weekday = $W <= 0 ? $W + 7 : $W
 
