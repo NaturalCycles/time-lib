@@ -12,15 +12,27 @@ export function since(from: number, until = Date.now()): string {
  * 125 ms
  * 1.125 sec
  * 11 sec
+ * 1m12s
+ * 59m2s
+ * 1h3m12s
  */
 export function ms(millis: number): string {
-  if (millis >= 10000) {
-    return `${Math.round(millis / 1000)} sec`
-  }
+  // <1 sec
+  if (millis < 1000) return `${Math.round(millis)} ms`
 
-  if (millis >= 1000) {
-    return `${(millis / 1000).toFixed(3)} sec`
-  }
+  // < 5 sec
+  if (millis < 5000) return `${(millis / 1000).toFixed(3)} sec`
 
-  return `${Math.round(millis)} ms`
+  // <1 min
+  if (millis < 60 * 1000) return `${Math.round(millis / 1000)} sec`
+
+  const sec = Math.round(millis / 1000) % 60
+  const min = Math.round(millis / (60 * 1000)) % 60
+  const hrs = Math.round(millis / (3600 * 1000))
+
+  // <1 hr
+  if (millis < 3599500) return `${min}m${sec}s`
+
+  // >= 1hr
+  return `${hrs}h${min}m${sec}s`
 }
