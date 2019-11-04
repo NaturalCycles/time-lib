@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/NaturalCycles/time-lib/compare/v1.5.0...v1.6.0) (2019-11-04)
+
+
+### Features
+
+* ms() to support minutes and hours ([e86bf6c](https://github.com/NaturalCycles/time-lib/commit/e86bf6caffd95af1caae7db15bbb106e7370a309))
+
 # [1.5.0](https://github.com/NaturalCycles/time-lib/compare/v1.4.3...v1.5.0) (2019-08-21)
 
 
