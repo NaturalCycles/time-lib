@@ -31,7 +31,7 @@ export function ms(millis: number): string {
   const hrs = Math.round(millis / (3600 * 1000))
 
   // <1 hr
-  if (millis < 3599500) return `${min}m${sec}s`
+  if (hrs === 0) return `${min}m${sec}s`
 
   // >= 1hr
   return `${hrs}h${min}m${sec}s`
