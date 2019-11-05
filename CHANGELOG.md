@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/NaturalCycles/time-lib/compare/v1.6.0...v1.6.1) (2019-11-05)
+
+
+### Bug Fixes
+
+* ms() simplification ([cb76701](https://github.com/NaturalCycles/time-lib/commit/cb767013526aa597d6c0f95818d64086e389bb07))
+
 # [1.6.0](https://github.com/NaturalCycles/time-lib/compare/v1.5.0...v1.6.0) (2019-11-04)
 
 
