@@ -27,7 +27,6 @@
   "module": "dist-esm/index.js",
   "types": "dist/index.d.ts",
   "sideEffects": [
-    "./dist/dayjs.full.js",
     "./dist-esm/dayjs.full.js"
   ],
   "publishConfig": {

@@ -1,5 +1,4 @@
-import { dayjs, Dayjs } from './dayjs.full'
-import { DayjsLocale } from './plugin/localeData'
+import { dayjs, Dayjs, DayjsLocale } from './dayjs.full'
 import { ms, since, TS_2018_06_21 } from './time.util'
 
 export {

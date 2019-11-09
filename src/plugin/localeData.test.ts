@@ -1,5 +1,4 @@
-import * as dayjs from 'dayjs'
-import './localeData'
+import { dayjs } from '..'
 
 test('localeData', () => {
   const localeData = dayjs().$locale()
