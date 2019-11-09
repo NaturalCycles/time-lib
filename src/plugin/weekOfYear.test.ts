@@ -1,5 +1,5 @@
 import { _range } from '@naturalcycles/js-lib'
-import moment from 'moment'
+import * as moment from 'moment'
 import { dayjs } from '../index'
 
 // const weekStarts = [0, 1, 6]
