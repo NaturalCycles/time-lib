@@ -39,7 +39,7 @@
   "engines": {
     "node": ">=10.13"
   },
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "Date/time related API, based on DayJS",
   "keywords": [
     "date",
