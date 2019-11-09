@@ -1,6 +1,8 @@
 {
   "name": "@naturalcycles/time-lib",
-  "scripts": {},
+  "scripts": {
+    "build-prod": "build-prod-esm-cjs"
+  },
   "dependencies": {
     "dayjs": "^1.8.14"
   },
@@ -14,6 +16,7 @@
   },
   "files": [
     "dist",
+    "dist-esm",
     "src",
     "!src/test",
     "!src/**/*.test.ts",
@@ -21,8 +24,12 @@
     "!src/**/__exclude"
   ],
   "main": "dist/index.js",
+  "module": "dist-esm/index.js",
   "types": "dist/index.d.ts",
-  "sideEffects": false,
+  "sideEffects": [
+    "./dist/dayjs.full.js",
+    "./dist-esm/dayjs.full.js"
+  ],
   "publishConfig": {
     "access": "public"
   },

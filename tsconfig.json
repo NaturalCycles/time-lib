@@ -5,5 +5,5 @@
     "target": "es2015"
   },
   "include": ["src"],
-  "exclude": ["**/__exclude", "**/@linked"]
+  "exclude": ["**/__exclude"]
 }

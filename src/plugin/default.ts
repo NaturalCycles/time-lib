@@ -14,6 +14,7 @@ declare module 'dayjs' {
 
     /**
      * Returns e.g `20180621_1754` or `20180621_175404` (with seconds).
+     * seconds @default to false
      */
     toCompactTime(seconds?: boolean): string
 
@@ -40,6 +41,8 @@ declare module 'dayjs' {
 }
 
 export const DAYJS_ISO_DATE = 'YYYY-MM-DD'
+export const DAYJS_TIME_HMS = 'HH:mm:ss'
+export const DAYJS_TIME_HM = 'HH:mm'
 export const DAYJS_PRETTY_TIME = 'YYYY-MM-DD HH:mm:ss'
 export const DAYJS_COMPACT_TIME = 'YYYYMMDD_HHmm'
 export const DAYJS_COMPACT_TIME_SECONDS = 'YYYYMMDD_HHmmss'

@@ -1,4 +1,4 @@
-import dayjs = require('dayjs')
+import * as dayjs from 'dayjs'
 import { Dayjs } from 'dayjs'
 import * as isBetween from 'dayjs/plugin/isBetween'
 import * as isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
