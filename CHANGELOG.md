@@ -1,3 +1,10 @@
+## [1.6.5](https://github.com/NaturalCycles/time-lib/compare/v1.6.4...v1.6.5) (2019-11-09)
+
+
+### Bug Fixes
+
+* revert esModuleInterop ([f49b3b1](https://github.com/NaturalCycles/time-lib/commit/f49b3b1b600a991f2a0fb2137d9c4ea144907d44))
+
 ## [1.6.4](https://github.com/NaturalCycles/time-lib/compare/v1.6.3...v1.6.4) (2019-11-09)
 
 
