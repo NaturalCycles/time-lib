@@ -1,10 +1,9 @@
-import * as dayjs from 'dayjs'
-import { Dayjs } from 'dayjs'
-import * as isBetween from 'dayjs/plugin/isBetween'
-import * as isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
-import * as isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
-import * as relativeTime from 'dayjs/plugin/relativeTime'
-import * as utc from 'dayjs/plugin/utc'
+import dayjs from 'dayjs'
+import isBetween from 'dayjs/plugin/isBetween'
+import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
+import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
+import relativeTime from 'dayjs/plugin/relativeTime'
+import utc from 'dayjs/plugin/utc'
 import { defaultPlugins } from './plugin/default'
 import { isoWeekdayPlugin } from './plugin/isoWeekday'
 import { weekOfYearPlugin } from './plugin/weekOfYear'
@@ -60,5 +59,7 @@ declare module 'dayjs' {
 dayjs.extendLocale({
   weekStart: 1,
 })
+
+type Dayjs = typeof dayjs
 
 export { Dayjs, dayjs }

@@ -1,5 +1,5 @@
 import { MOCK_TS_2018_06_21, mockTime } from '@naturalcycles/test-lib'
-import * as dayjs from 'dayjs'
+import dayjs from 'dayjs'
 import { TS_2018_06_21 } from '../time.util'
 import { defaultPlugins } from './default'
 dayjs.extend(defaultPlugins)

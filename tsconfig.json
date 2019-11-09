@@ -1,6 +1,7 @@
 {
   "extends": "@naturalcycles/dev-lib/cfg/tsconfig.json",
   "compilerOptions": {
+    "esModuleInterop": true,
     "outDir": "dist",
     "target": "es2015"
   },
