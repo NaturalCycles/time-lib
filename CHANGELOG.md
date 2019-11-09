@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/NaturalCycles/time-lib/compare/v1.6.1...v1.6.2) (2019-11-09)
+
+
+### Bug Fixes
+
+* export esm build (/dist-esm) ([01bef6a](https://github.com/NaturalCycles/time-lib/commit/01bef6a2368a7ccf5a74c0e0649e8622a3683d90))
+
 ## [1.6.1](https://github.com/NaturalCycles/time-lib/compare/v1.6.0...v1.6.1) (2019-11-05)
 
 
