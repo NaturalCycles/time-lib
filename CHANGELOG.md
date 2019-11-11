@@ -1,3 +1,10 @@
+## [1.6.6](https://github.com/NaturalCycles/time-lib/compare/v1.6.5...v1.6.6) (2019-11-11)
+
+
+### Bug Fixes
+
+* Dayjs interface ([e6146d3](https://github.com/NaturalCycles/time-lib/commit/e6146d36e59b369151d57c370388e91f647418d1))
+
 ## [1.6.5](https://github.com/NaturalCycles/time-lib/compare/v1.6.4...v1.6.5) (2019-11-09)
 
 
