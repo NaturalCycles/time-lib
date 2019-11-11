@@ -1,4 +1,5 @@
 import * as dayjs from 'dayjs'
+import { Dayjs } from 'dayjs'
 import * as isBetween from 'dayjs/plugin/isBetween'
 import * as isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
 import * as isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
@@ -59,7 +60,5 @@ declare module 'dayjs' {
 dayjs.extendLocale({
   weekStart: 1,
 })
-
-type Dayjs = typeof dayjs
 
 export { Dayjs, dayjs }
