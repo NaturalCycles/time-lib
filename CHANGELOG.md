@@ -1,3 +1,10 @@
+## [1.6.7](https://github.com/NaturalCycles/time-lib/compare/v1.6.6...v1.6.7) (2019-11-14)
+
+
+### Bug Fixes
+
+* ms returning 1h59m instead of 59m ([970cba5](https://github.com/NaturalCycles/time-lib/commit/970cba503bd347fa598748e140f1a3e0ad6abe78))
+
 ## [1.6.6](https://github.com/NaturalCycles/time-lib/compare/v1.6.5...v1.6.6) (2019-11-11)
 
 
