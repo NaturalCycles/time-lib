@@ -10,8 +10,8 @@
     "@naturalcycles/dev-lib": "^9.0.2",
     "@naturalcycles/js-lib": "^8.2.1",
     "@naturalcycles/test-lib": "^1.0.0",
-    "@types/node": "^12.0.2",
-    "jest": "^24.8.0",
+    "@types/node": "^13.7.0",
+    "jest": "^25.1.0",
     "moment": "^2.24.0"
   },
   "files": [

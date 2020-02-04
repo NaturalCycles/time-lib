@@ -24,7 +24,7 @@ test.each([
   [2, '2019-07-16'],
   [3, '2019-07-17'],
   [4, '2019-07-18'],
-] as any)('isoWeekday(%s) = %s', (isoWeekday: number, expected: string) => {
+] as [number, string][])('isoWeekday(%s) = %s', (isoWeekday, expected) => {
   const d = dayjs('2019-07-12')
   expect(d.isoWeekday(isoWeekday).format('YYYY-MM-DD')).toBe(expected)
 })
