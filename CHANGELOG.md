@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/NaturalCycles/time-lib/compare/v1.6.7...v1.7.0) (2020-02-10)
+
+
+### Features
+
+* add minMax plugin ([c0187ea](https://github.com/NaturalCycles/time-lib/commit/c0187ead764ddd4744a76efbe7bb6f595422c9c1))
+
 ## [1.6.7](https://github.com/NaturalCycles/time-lib/compare/v1.6.6...v1.6.7) (2019-11-14)
 
 
