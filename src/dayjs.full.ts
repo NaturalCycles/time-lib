@@ -24,6 +24,7 @@ dayjs.extend(weekOfYearPlugin)
 import 'dayjs/plugin/isBetween'
 import 'dayjs/plugin/isSameOrAfter'
 import 'dayjs/plugin/isSameOrBefore'
+import 'dayjs/plugin/minMax'
 import 'dayjs/plugin/relativeTime'
 import 'dayjs/plugin/utc'
 import './plugin/default'
