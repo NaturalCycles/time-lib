@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/NaturalCycles/time-lib/compare/v1.7.0...v1.8.0) (2020-02-10)
+
+
+### Features
+
+* add namespace augmentation ([ce25e28](https://github.com/NaturalCycles/time-lib/commit/ce25e2850e8beec6bb37f5e89c77bf4a9c068591))
+
 # [1.7.0](https://github.com/NaturalCycles/time-lib/compare/v1.6.7...v1.7.0) (2020-02-10)
 
 
