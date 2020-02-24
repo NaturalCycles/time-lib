@@ -35,6 +35,10 @@ export function ms(millis: number): string {
     return `${min}m${sec}s`
   }
 
-  // >= 1hr
-  return `${hrs}h${min}m${sec}s`
+  if (hrs < 24) {
+    return `${hrs}h${min}m`
+  }
+
+  // >= 24h
+  return `${Math.round(hrs + min / 60)}h`
 }
