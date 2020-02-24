@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/NaturalCycles/time-lib/compare/v1.8.0...v1.9.0) (2020-02-24)
+
+
+### Features
+
+* ms() to round hours after 24h ([4716cc3](https://github.com/NaturalCycles/time-lib/commit/4716cc3c4b5e937bee77367de5b116bacbfbfd0d))
+
 # [1.8.0](https://github.com/NaturalCycles/time-lib/compare/v1.7.0...v1.8.0) (2020-02-10)
 
 
