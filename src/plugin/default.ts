@@ -19,6 +19,11 @@ declare module 'dayjs' {
     toCompactTime(seconds?: boolean): string
 
     /**
+     * Returns e.g `20180621`
+     */
+    toCompactDate(): string
+
+    /**
      * Returns unixtime in milliseconds.
      */
     unixMillis(): number
@@ -41,6 +46,7 @@ declare module 'dayjs' {
 }
 
 export const DAYJS_ISO_DATE = 'YYYY-MM-DD'
+export const DAYJS_COMPACT_DATE = 'YYYYMMDD'
 export const DAYJS_TIME_HMS = 'HH:mm:ss'
 export const DAYJS_TIME_HM = 'HH:mm'
 export const DAYJS_PRETTY_TIME = 'YYYY-MM-DD HH:mm:ss'
@@ -58,6 +64,10 @@ export const defaultPlugins: PluginFunc = (_opt, dayjsClass, _dayjsFactory) => {
 
   dayjsClass.prototype.toCompactTime = function(this: Dayjs, seconds = false): string {
     return this.format(seconds ? DAYJS_COMPACT_TIME_SECONDS : DAYJS_COMPACT_TIME)
+  }
+
+  dayjsClass.prototype.toCompactDate = function(this: Dayjs): string {
+    return this.format(DAYJS_COMPACT_DATE)
   }
 
   dayjsClass.prototype.unixMillis = function(this: Dayjs): number {

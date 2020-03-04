@@ -43,6 +43,7 @@ test('toCompactTime', () => {
   expect(DAYJS_2018_06_21.toCompactTime()).toBe('20180621_0000')
   expect(DAYJS_2018_06_21.toCompactTime(false)).toBe('20180621_0000')
   expect(DAYJS_2018_06_21.toCompactTime(true)).toBe('20180621_000000')
+  expect(DAYJS_2018_06_21.toCompactDate()).toBe('20180621')
 })
 
 test('today', () => {
