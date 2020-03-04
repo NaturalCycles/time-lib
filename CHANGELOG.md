@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/NaturalCycles/time-lib/compare/v1.9.0...v1.10.0) (2020-03-04)
+
+
+### Features
+
+* toCompactDate() ([c631b23](https://github.com/NaturalCycles/time-lib/commit/c631b2373a225155473b0f41b1c7b649a47f2c5b))
+
 # [1.9.0](https://github.com/NaturalCycles/time-lib/compare/v1.8.0...v1.9.0) (2020-02-24)
 
 
