@@ -18,7 +18,7 @@ declare module 'dayjs' {
 }
 
 export const isoWeekdayPlugin: PluginFunc = (_opt, dayjsClass) => {
-  dayjsClass.prototype.isoWeekday = function(this: Dayjs, setWeekday?: number) {
+  dayjsClass.prototype.isoWeekday = function (this: Dayjs, setWeekday?: number) {
     const { $W } = this as any
     const weekday = $W <= 0 ? $W + 7 : $W
 

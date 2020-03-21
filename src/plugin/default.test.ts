@@ -47,22 +47,6 @@ test('toCompactTime', () => {
 })
 
 test('today', () => {
-  expect(
-    dayjs()
-      .today()
-      .valueOf(),
-  ).toBe(
-    dayjs()
-      .startOf('day')
-      .valueOf(),
-  )
-  expect(
-    dayjs()
-      .today()
-      .toISODate(),
-  ).toBe(
-    dayjs()
-      .startOf('day')
-      .toISODate(),
-  )
+  expect(dayjs().today().valueOf()).toBe(dayjs().startOf('day').valueOf())
+  expect(dayjs().today().toISODate()).toBe(dayjs().startOf('day').toISODate())
 })

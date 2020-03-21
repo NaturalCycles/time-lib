@@ -44,9 +44,7 @@ test('weekOfYear', () => {
     _range(0, 29000).forEach(n => {
       const d = dayjs(startDate).add(n, 'day')
       const isoWeek1 = d.week()
-      const isoWeek2 = moment(startDate)
-        .add(n, 'day')
-        .week()
+      const isoWeek2 = moment(startDate).add(n, 'day').week()
       // console.log(`${d.toISODate()}: ${d.isoWeek()}`)
 
       if (isoWeek1 !== isoWeek2) {

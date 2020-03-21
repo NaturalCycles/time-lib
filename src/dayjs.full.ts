@@ -52,7 +52,7 @@ declare module 'dayjs' {
   export function extendLocale(ext: Partial<DayjsLocale>): void
 }
 
-;(dayjs as any).extendLocale = function(ext: any) {
+;(dayjs as any).extendLocale = function (ext: any) {
   dayjs.locale({
     ...dayjs().$locale(),
     ...ext,
