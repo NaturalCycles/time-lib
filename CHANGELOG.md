@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/NaturalCycles/time-lib/compare/v1.10.0...v1.11.0) (2020-03-27)
+
+
+### Features
+
+* .toPretty(seconds=false) ([1980140](https://github.com/NaturalCycles/time-lib/commit/19801408f4799df51c99d7971f0634c472e3202f))
+
 # [1.10.0](https://github.com/NaturalCycles/time-lib/compare/v1.9.0...v1.10.0) (2020-03-04)
 
 
