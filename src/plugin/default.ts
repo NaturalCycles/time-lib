@@ -9,8 +9,10 @@ declare module 'dayjs' {
 
     /**
      * Returns e.g `2018-06-21 17:54:21`
+     * or `2018-06-21 17:54` (with seconds=false)
+     * @param seconds defauls to true
      */
-    toPretty(): string
+    toPretty(seconds?: boolean): string
 
     /**
      * Returns e.g `20180621_1754` or `20180621_175404` (with seconds).
@@ -50,6 +52,7 @@ export const DAYJS_COMPACT_DATE = 'YYYYMMDD'
 export const DAYJS_TIME_HMS = 'HH:mm:ss'
 export const DAYJS_TIME_HM = 'HH:mm'
 export const DAYJS_PRETTY_TIME = 'YYYY-MM-DD HH:mm:ss'
+export const DAYJS_PRETTY_TIME_NO_SECONDS = 'YYYY-MM-DD HH:mm'
 export const DAYJS_COMPACT_TIME = 'YYYYMMDD_HHmm'
 export const DAYJS_COMPACT_TIME_SECONDS = 'YYYYMMDD_HHmmss'
 
@@ -58,8 +61,8 @@ export const defaultPlugins: PluginFunc = (_opt, dayjsClass, _dayjsFactory) => {
     return this.format(DAYJS_ISO_DATE)
   }
 
-  dayjsClass.prototype.toPretty = function (this: Dayjs): string {
-    return this.format(DAYJS_PRETTY_TIME)
+  dayjsClass.prototype.toPretty = function (this: Dayjs, seconds = true): string {
+    return this.format(seconds ? DAYJS_PRETTY_TIME : DAYJS_PRETTY_TIME_NO_SECONDS)
   }
 
   dayjsClass.prototype.toCompactTime = function (this: Dayjs, seconds = false): string {

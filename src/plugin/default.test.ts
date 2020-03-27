@@ -35,6 +35,7 @@ test('toISODate', () => {
 
 test('toPretty', () => {
   expect(DAYJS_2018_06_21.toPretty()).toBe('2018-06-21 00:00:00')
+  expect(DAYJS_2018_06_21.toPretty(false)).toBe('2018-06-21 00:00')
   expect(dayjs().toPretty()).toBe('2018-06-21 00:00:00')
   expect(dayjs('2017-03-14').toPretty()).toBe('2017-03-14 00:00:00')
 })
