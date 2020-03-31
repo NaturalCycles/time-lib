@@ -1,5 +1,5 @@
+import { mockTime } from '@naturalcycles/dev-lib/dist/testing'
 import { _range } from '@naturalcycles/js-lib'
-import { mockTime } from '@naturalcycles/test-lib'
 import { ms, since } from './time.util'
 
 beforeEach(() => {
