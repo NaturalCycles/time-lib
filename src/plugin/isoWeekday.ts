@@ -1,4 +1,4 @@
-import { Dayjs, PluginFunc } from 'dayjs'
+import type { Dayjs, PluginFunc } from 'dayjs'
 
 declare module 'dayjs' {
   interface Dayjs {
