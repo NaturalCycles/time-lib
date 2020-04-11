@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/NaturalCycles/time-lib/compare/v1.11.0...v1.11.1) (2020-04-11)
+
+
+### Bug Fixes
+
+* remove "module" field as a work-around ([d5f06ae](https://github.com/NaturalCycles/time-lib/commit/d5f06aeacf8a439c9f653e8d2891a3dc226b6276))
+
 # [1.11.0](https://github.com/NaturalCycles/time-lib/compare/v1.10.0...v1.11.0) (2020-03-27)
 
 
