@@ -23,7 +23,6 @@
     "!src/**/__exclude"
   ],
   "main": "dist/index.js",
-  "module": "dist-esm/index.js",
   "types": "dist/index.d.ts",
   "sideEffects": [
     "./dist-esm/dayjs.full.js"
