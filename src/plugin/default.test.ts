@@ -1,10 +1,9 @@
 import { mockTime, MOCK_TS_2018_06_21 } from '@naturalcycles/dev-lib/dist/testing'
 import * as dayjs from 'dayjs'
-import { TS_2018_06_21 } from '../time.util'
 import { defaultPlugins } from './default'
 dayjs.extend(defaultPlugins)
 
-const DAYJS_2018_06_21 = dayjs.unix(TS_2018_06_21)
+const DAYJS_2018_06_21 = dayjs.unix(MOCK_TS_2018_06_21)
 
 beforeEach(() => {
   mockTime()
