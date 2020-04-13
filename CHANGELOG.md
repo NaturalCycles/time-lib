@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/NaturalCycles/time-lib/compare/v1.11.1...v2.0.0) (2020-04-13)
+
+
+### Features
+
+* ms, since are moved away to js-lib ([357b6ed](https://github.com/NaturalCycles/time-lib/commit/357b6ed791d45a4f38ab95931a3127e44fc8383d))
+
+
+### BREAKING CHANGES
+
+* ^^^
+
 ## [1.11.1](https://github.com/NaturalCycles/time-lib/compare/v1.11.0...v1.11.1) (2020-04-11)
 
 
