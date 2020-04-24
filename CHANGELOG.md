@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/NaturalCycles/time-lib/compare/v2.0.0...v2.1.0) (2020-04-24)
+
+
+### Features
+
+* localizedFormat plugin (bundled), loadDayjsLocales ([9bd2496](https://github.com/NaturalCycles/time-lib/commit/9bd24962f4bc7bffbbf9ce84f0de838353d61edb))
+
 # [2.0.0](https://github.com/NaturalCycles/time-lib/compare/v1.11.1...v2.0.0) (2020-04-13)
 
 
