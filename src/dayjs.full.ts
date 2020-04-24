@@ -3,6 +3,7 @@ import { Dayjs } from 'dayjs'
 import * as isBetween from 'dayjs/plugin/isBetween'
 import * as isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
 import * as isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
+import * as localizedFormat from 'dayjs/plugin/localizedFormat'
 import * as minMax from 'dayjs/plugin/minMax'
 import * as relativeTime from 'dayjs/plugin/relativeTime'
 import * as utc from 'dayjs/plugin/utc'
@@ -16,6 +17,7 @@ dayjs.extend(isSameOrBefore)
 dayjs.extend(relativeTime)
 dayjs.extend(isBetween)
 dayjs.extend(minMax)
+dayjs.extend(localizedFormat)
 dayjs.extend(defaultPlugins)
 dayjs.extend(isoWeekdayPlugin)
 dayjs.extend(weekOfYearPlugin)
@@ -24,6 +26,7 @@ dayjs.extend(weekOfYearPlugin)
 import 'dayjs/plugin/isBetween'
 import 'dayjs/plugin/isSameOrAfter'
 import 'dayjs/plugin/isSameOrBefore'
+import 'dayjs/plugin/localizedFormat'
 import 'dayjs/plugin/minMax'
 import 'dayjs/plugin/relativeTime'
 import 'dayjs/plugin/utc'
