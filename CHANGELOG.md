@@ -1,3 +1,10 @@
+## [3.0.3](https://github.com/NaturalCycles/time-lib/compare/v3.0.2...v3.0.3) (2020-05-11)
+
+
+### Bug Fixes
+
+* missing constructor arguments in types ([2311e6a](https://github.com/NaturalCycles/time-lib/commit/2311e6a71de19798313fe9434261ce95d34e3eb6))
+
 ## [3.0.2](https://github.com/NaturalCycles/time-lib/compare/v3.0.1...v3.0.2) (2020-05-11)
 
 
