@@ -10,7 +10,7 @@
     "@naturalcycles/dev-lib": "^10.2.0",
     "@naturalcycles/js-lib": "^13.0.0",
     "@types/node": "^13.7.0",
-    "jest": "^25.1.0",
+    "jest": "^26.0.1",
     "moment": "^2.24.0"
   },
   "files": [
