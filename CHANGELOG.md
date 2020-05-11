@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/NaturalCycles/time-lib/compare/v3.0.1...v3.0.2) (2020-05-11)
+
+
+### Bug Fixes
+
+* release ([09fa7ce](https://github.com/NaturalCycles/time-lib/commit/09fa7ce26d82d11cb8d3264373e0a6bf3e62b973))
+
 ## [3.0.1](https://github.com/NaturalCycles/time-lib/compare/v3.0.0...v3.0.1) (2020-05-11)
 
 
