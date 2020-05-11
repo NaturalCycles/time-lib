@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/NaturalCycles/time-lib/compare/v2.1.0...v2.1.1) (2020-05-11)
+
+
+### Bug Fixes
+
+* export esm build again ([6b416ab](https://github.com/NaturalCycles/time-lib/commit/6b416abb0813f25f6437b5d1431587091eb7bca0))
+
 # [2.1.0](https://github.com/NaturalCycles/time-lib/compare/v2.0.0...v2.1.0) (2020-04-24)
 
 
