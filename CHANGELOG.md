@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/NaturalCycles/time-lib/compare/v2.1.1...v3.0.0) (2020-05-11)
+
+
+### Bug Fixes
+
+* typescript issues ([#3](https://github.com/NaturalCycles/time-lib/issues/3)) ([f73b247](https://github.com/NaturalCycles/time-lib/commit/f73b2478ca2ea85d8b043625d9a78a37ed05c4c8))
+
+
+### BREAKING CHANGES
+
+* Dayjs is now IDayjsInstance, typeof dayjs is now IDayjs
+
 ## [2.1.1](https://github.com/NaturalCycles/time-lib/compare/v2.1.0...v2.1.1) (2020-05-11)
 
 
