@@ -1,21 +1,7 @@
-import type { Dayjs, PluginFunc } from 'dayjs'
-
-declare module 'dayjs' {
-  interface Dayjs {
-    /**
-     * Returns iso week number (where week starts on Monday)
-     */
-    week(): number
-
-    /**
-     * Set date to NEXT date that satisfies the week number.
-     */
-    // week (value: number): Dayjs // not supported
-  }
-}
+import type { IDayjsInstance, PluginFunc } from '../types'
 
 export const weekOfYearPlugin: PluginFunc = (_opt, dayjsClass, dayjs) => {
-  dayjsClass.prototype.week = function (this: Dayjs) {
+  dayjsClass.prototype.week = function (this: IDayjsInstance) {
     const weekStart = this.$locale().weekStart || 0
 
     if (weekStart === 1) {

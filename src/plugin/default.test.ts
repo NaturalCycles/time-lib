@@ -1,7 +1,5 @@
 import { mockTime, MOCK_TS_2018_06_21 } from '@naturalcycles/dev-lib/dist/testing'
-import * as dayjs from 'dayjs'
-import { defaultPlugins } from './default'
-dayjs.extend(defaultPlugins)
+import { dayjs } from '../dayjs.full'
 
 const DAYJS_2018_06_21 = dayjs.unix(MOCK_TS_2018_06_21)
 
@@ -12,8 +10,8 @@ beforeEach(() => {
 test('dayjs', () => {
   const now = dayjs()
   expect(now).toBeInstanceOf(dayjs)
-  expect(now.toISOString()).toBe('2018-06-21T00:00:00.000Z')
-  expect(DAYJS_2018_06_21.toISOString()).toBe('2018-06-21T00:00:00.000Z')
+  expect(now.toDate().toISOString()).toBe('2018-06-21T00:00:00.000Z')
+  expect(DAYJS_2018_06_21.toDate().toISOString()).toBe('2018-06-21T00:00:00.000Z')
   expect(now.toJSON()).toBe('2018-06-21T00:00:00.000Z')
   expect(now.unix()).toBe(MOCK_TS_2018_06_21)
   expect(now.valueOf()).toBe(MOCK_TS_2018_06_21 * 1000)

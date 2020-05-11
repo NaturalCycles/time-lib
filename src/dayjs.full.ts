@@ -1,70 +1,25 @@
-import * as dayjs from 'dayjs'
-import { Dayjs } from 'dayjs'
-import * as isBetween from 'dayjs/plugin/isBetween'
-import * as isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
-import * as isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
-import * as localizedFormat from 'dayjs/plugin/localizedFormat'
-import * as minMax from 'dayjs/plugin/minMax'
-import * as relativeTime from 'dayjs/plugin/relativeTime'
-import * as utc from 'dayjs/plugin/utc'
+const dayjs = require('dayjs') as IDayjs
+
 import { defaultPlugins } from './plugin/default'
 import { isoWeekdayPlugin } from './plugin/isoWeekday'
 import { weekOfYearPlugin } from './plugin/weekOfYear'
+import type { IDayjs } from './types'
 
-dayjs.extend(utc)
-dayjs.extend(isSameOrAfter)
-dayjs.extend(isSameOrBefore)
-dayjs.extend(relativeTime)
-dayjs.extend(isBetween)
-dayjs.extend(minMax)
-dayjs.extend(localizedFormat)
+dayjs.extend(require('dayjs/plugin/utc'))
+dayjs.extend(require('dayjs/plugin/isSameOrAfter'))
+dayjs.extend(require('dayjs/plugin/isSameOrBefore'))
+dayjs.extend(require('dayjs/plugin/relativeTime'))
+dayjs.extend(require('dayjs/plugin/isBetween'))
+dayjs.extend(require('dayjs/plugin/minMax'))
+dayjs.extend(require('dayjs/plugin/localizedFormat'))
+dayjs.extend(require('dayjs/plugin/localeData'))
+dayjs.extend(require('dayjs/plugin/updateLocale'))
 dayjs.extend(defaultPlugins)
 dayjs.extend(isoWeekdayPlugin)
 dayjs.extend(weekOfYearPlugin)
 
-// Necessary to import these files, cause they contain augmentation of Dayjs namespace
-import 'dayjs/plugin/isBetween'
-import 'dayjs/plugin/isSameOrAfter'
-import 'dayjs/plugin/isSameOrBefore'
-import 'dayjs/plugin/localizedFormat'
-import 'dayjs/plugin/minMax'
-import 'dayjs/plugin/relativeTime'
-import 'dayjs/plugin/utc'
-import './plugin/default'
-import './plugin/isoWeekday'
-import './plugin/weekOfYear'
+// Set en-gb by default, to have e.g Monday as fdow
+require(`dayjs/locale/en-gb`)
+dayjs.locale('en-gb')
 
-export interface DayjsLocale {
-  name: string
-  weekStart?: number
-  weekdays?: string[]
-  months?: string[]
-  [k: string]: any
-  // todo: complete
-  // Doc: https://github.com/iamkun/dayjs/blob/dev/docs/en/I18n.md#customize
-}
-
-declare module 'dayjs' {
-  interface Dayjs {
-    /**
-     * Returns internal locale data
-     */
-    $locale(): DayjsLocale
-  }
-
-  export function extendLocale(ext: Partial<DayjsLocale>): void
-}
-
-;(dayjs as any).extendLocale = function (ext: any) {
-  dayjs.locale({
-    ...dayjs().$locale(),
-    ...ext,
-  })
-}
-
-// Default weekStart to Monday
-dayjs.extendLocale({
-  weekStart: 1,
-})
-
-export { Dayjs, dayjs }
+export { dayjs }

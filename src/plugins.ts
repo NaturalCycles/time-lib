@@ -1,5 +1,5 @@
-import type { PluginFunc } from 'dayjs'
 import { dayjs } from './dayjs.full'
+import type { PluginFunc } from './types'
 
 /**
  * Experimental!

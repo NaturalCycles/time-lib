@@ -8,7 +8,9 @@
 
 # Why
 
-- Opinionated. Includes "needed" dayjs plugins.
+- Fixes TypeScript imports, regardless if esModuleInterop is used or not
+- ~~Allows to use it as ESM package with tree-shaking (without breaking your TypeScript again)~~
+- Opinionated. Includes "needed" dayjs plugins by default.
 - Allows to "just import dayjs" and not worry about:
   - Loading plugins for all of your "entry points", such as `startServer.ts`, `setupJest.ts`, at
     every cron job, etc.
@@ -16,6 +18,7 @@
   - That TypeScript types are not loaded with plugins
 - Extends dayjs with some useful functions (via Plugin interface)
 - Has working `isoWeekday` plugin
+- Has `en-gb` locale by default, so, default firstDayOfWeek is Monday
 
 # API
 

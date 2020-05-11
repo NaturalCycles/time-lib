@@ -1,10 +1,10 @@
 {
   "name": "@naturalcycles/time-lib",
   "scripts": {
-    "build-prod": "build-prod-esm-cjs"
+    "//build-prod": "build-prod-esm-cjs"
   },
   "dependencies": {
-    "dayjs": "^1.8.14"
+    "dayjs": "^1.8.26"
   },
   "devDependencies": {
     "@naturalcycles/dev-lib": "^10.2.0",
@@ -24,7 +24,7 @@
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "module": "dist-esm/index.js",
+  "//module": "dist-esm/index.js",
   "sideEffects": [
     "./dist-esm/dayjs.full.js"
   ],
@@ -39,7 +39,7 @@
     "node": ">=10.13"
   },
   "version": "2.1.1",
-  "description": "Date/time related API, based on DayJS",
+  "description": "Date/time related API, based on Day.js",
   "keywords": [
     "date",
     "time",
