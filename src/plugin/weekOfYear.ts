@@ -1,4 +1,4 @@
-import type { IDayjsInstance, PluginFunc } from '../dayjs/types'
+import type { IDayjsInstance, PluginFunc } from '../types'
 
 export const weekOfYearPlugin: PluginFunc = (_opt, dayjsClass, dayjs) => {
   dayjsClass.prototype.week = function (this: IDayjsInstance) {

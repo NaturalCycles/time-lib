@@ -1,4 +1,4 @@
-import type { IDayjsInstance, PluginFunc } from '../dayjs/types'
+import type { IDayjsInstance, PluginFunc } from '../types'
 
 export const isoWeekdayPlugin: PluginFunc = (_opt, dayjsClass) => {
   dayjsClass.prototype.isoWeekday = function (this: IDayjsInstance, setWeekday?: number) {

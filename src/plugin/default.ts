@@ -1,4 +1,4 @@
-import type { IDayjsInstance, PluginFunc } from '../dayjs/types'
+import type { IDayjsInstance, PluginFunc } from '../types'
 
 // todo: fix the interface extension
 
