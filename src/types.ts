@@ -20,7 +20,7 @@ export type QUnitType = UnitType | 'quarter' | 'Q'
 export type PluginFunc<T = unknown> = (option: T, c: IDayjsFactory, d: IDayjsFactory) => void
 
 export interface IDayjsFactory {
-  (cfg?: ConfigType): IDayjs
+  (cfg?: ConfigType, option?: OptionType, locale?: string): IDayjs
 
   unix(t: number): IDayjs
 
