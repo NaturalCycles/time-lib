@@ -30,7 +30,7 @@ const startDate = '2000-01-01'
 test('weekOfYear', () => {
   presets.forEach(preset => {
     const { dow, doy, name } = preset
-    dayjs.extendLocale({
+    dayjs.updateLocale(dayjs.locale(), {
       weekStart: dow,
     })
 

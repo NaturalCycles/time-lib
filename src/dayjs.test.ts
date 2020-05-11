@@ -1,5 +1,9 @@
 import { dayjs } from './dayjs.full'
 
 test('default to weekStart=Monday', () => {
-  expect(dayjs().$locale().weekStart).toBe(1)
+  const locale = dayjs().$locale()
+  expect(locale).toMatchObject({
+    name: 'en-gb',
+    weekStart: 1,
+  })
 })

@@ -1,51 +1,6 @@
-import type { Dayjs, PluginFunc } from 'dayjs'
+import type { IDayjsInstance, PluginFunc } from '../dayjs/types'
 
-declare module 'dayjs' {
-  interface Dayjs {
-    /**
-     * Returns ISO date, e.g `2018-06-21`
-     */
-    toISODate(): string
-
-    /**
-     * Returns e.g `2018-06-21 17:54:21`
-     * or `2018-06-21 17:54` (with seconds=false)
-     * @param seconds defauls to true
-     */
-    toPretty(seconds?: boolean): string
-
-    /**
-     * Returns e.g `20180621_1754` or `20180621_175404` (with seconds).
-     * seconds @default to false
-     */
-    toCompactTime(seconds?: boolean): string
-
-    /**
-     * Returns e.g `20180621`
-     */
-    toCompactDate(): string
-
-    /**
-     * Returns unixtime in milliseconds.
-     */
-    unixMillis(): number
-
-    /**
-     * Shortcut for .startOf('day')
-     */
-    today(): Dayjs
-
-    /**
-     * Forbid the method in favor of .toISODate()
-     */
-    // toISOString (): never
-
-    /**
-     * Forbid the method in favor of .unixMillis()
-     */
-    // valueOf (): never
-  }
-}
+// todo: fix the interface extension
 
 export const DAYJS_ISO_DATE = 'YYYY-MM-DD'
 export const DAYJS_COMPACT_DATE = 'YYYYMMDD'
@@ -57,27 +12,27 @@ export const DAYJS_COMPACT_TIME = 'YYYYMMDD_HHmm'
 export const DAYJS_COMPACT_TIME_SECONDS = 'YYYYMMDD_HHmmss'
 
 export const defaultPlugins: PluginFunc = (_opt, dayjsClass, _dayjsFactory) => {
-  dayjsClass.prototype.toISODate = function (this: Dayjs): string {
+  dayjsClass.prototype.toISODate = function (this: IDayjsInstance): string {
     return this.format(DAYJS_ISO_DATE)
   }
 
-  dayjsClass.prototype.toPretty = function (this: Dayjs, seconds = true): string {
+  dayjsClass.prototype.toPretty = function (this: IDayjsInstance, seconds = true): string {
     return this.format(seconds ? DAYJS_PRETTY_TIME : DAYJS_PRETTY_TIME_NO_SECONDS)
   }
 
-  dayjsClass.prototype.toCompactTime = function (this: Dayjs, seconds = false): string {
+  dayjsClass.prototype.toCompactTime = function (this: IDayjsInstance, seconds = false): string {
     return this.format(seconds ? DAYJS_COMPACT_TIME_SECONDS : DAYJS_COMPACT_TIME)
   }
 
-  dayjsClass.prototype.toCompactDate = function (this: Dayjs): string {
+  dayjsClass.prototype.toCompactDate = function (this: IDayjsInstance): string {
     return this.format(DAYJS_COMPACT_DATE)
   }
 
-  dayjsClass.prototype.unixMillis = function (this: Dayjs): number {
+  dayjsClass.prototype.unixMillis = function (this: any): number {
     return this.valueOf()
   }
 
-  dayjsClass.prototype.today = function (this: Dayjs): Dayjs {
+  dayjsClass.prototype.today = function (this: IDayjsInstance): IDayjsInstance {
     return this.startOf('day')
   }
 }

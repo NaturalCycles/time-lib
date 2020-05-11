@@ -1,6 +1,4 @@
-import * as dayjs from 'dayjs'
-import { isoWeekdayPlugin } from './isoWeekday'
-dayjs.extend(isoWeekdayPlugin)
+import { dayjs } from '../dayjs.full'
 
 test.each([
   ['2019-06-02', 7],
