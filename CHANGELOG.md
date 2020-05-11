@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/NaturalCycles/time-lib/compare/v3.0.0...v3.0.1) (2020-05-11)
+
+
+### Bug Fixes
+
+* root cause of typings issue ([892fb41](https://github.com/NaturalCycles/time-lib/commit/892fb4144a66a0f26125949c474eac7e4b9bf2c9))
+
 # [3.0.0](https://github.com/NaturalCycles/time-lib/compare/v2.1.1...v3.0.0) (2020-05-11)
 
 
