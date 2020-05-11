@@ -3,6 +3,6 @@
  */
 export function loadDayjsLocales(locales: string[]): void {
   locales.forEach(locale => {
-    require(`./vendor/dayjs/locale/${locale}`)
+    require(`dayjs/locale/${locale}`)
   })
 }

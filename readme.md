@@ -1,6 +1,6 @@
 ## @naturalcycles/time-lib
 
-> Date/time API, based on forked Day.js.
+> Date/time API, based on Dayjs.
 
 [![npm](https://img.shields.io/npm/v/@naturalcycles/time-lib/latest.svg)](https://www.npmjs.com/package/@naturalcycles/time-lib)
 [![min.gz size](https://badgen.net/bundlephobia/minzip/@naturalcycles/time-lib)](https://bundlephobia.com/result?p=@naturalcycles/time-lib)
@@ -9,7 +9,7 @@
 # Why
 
 - Fixes TypeScript imports, regardless if esModuleInterop is used or not
-- Allows to use it as ESM package with tree-shaking (without breaking your TypeScript again)
+- ~~Allows to use it as ESM package with tree-shaking (without breaking your TypeScript again)~~
 - Opinionated. Includes "needed" dayjs plugins by default.
 - Allows to "just import dayjs" and not worry about:
   - Loading plugins for all of your "entry points", such as `startServer.ts`, `setupJest.ts`, at
@@ -23,14 +23,6 @@
 # API
 
 TODO
-
-# Development
-
-## Sync with upstream dayjs
-
-Copy over `daysjs/src` into `src/vendor/dayjs`.
-
-Do a full replace (used in locales): `import dayjs from 'dayjs'` to `import dayjs from '..'`
 
 # Packaging
 

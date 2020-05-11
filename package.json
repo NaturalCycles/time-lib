@@ -1,13 +1,12 @@
 {
   "name": "@naturalcycles/time-lib",
   "scripts": {
-    "build-prod": "build-prod-esm-cjs && yarn copy-vendor && yarn copy-vendor-esm",
-    "copy-vendor": "kpy ./src/vendor ./dist/vendor",
-    "copy-vendor-esm": "kpy ./src/vendor ./dist-esm/vendor"
+    "//build-prod": "build-prod-esm-cjs"
   },
-  "dependencies": {},
+  "dependencies": {
+    "dayjs": "^1.8.26"
+  },
   "devDependencies": {
-    "@babel/preset-env": "^7.9.6",
     "@naturalcycles/dev-lib": "^10.2.0",
     "@naturalcycles/js-lib": "^13.0.0",
     "@types/node": "^13.7.0",
@@ -25,7 +24,7 @@
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "module": "dist-esm/index.js",
+  "//module": "dist-esm/index.js",
   "sideEffects": [
     "./dist-esm/dayjs.full.js"
   ],
@@ -40,7 +39,7 @@
     "node": ">=10.13"
   },
   "version": "2.1.1",
-  "description": "Date/time related API, based on forked Day.js",
+  "description": "Date/time related API, based on Day.js",
   "keywords": [
     "date",
     "time",
