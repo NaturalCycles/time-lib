@@ -1,4 +1,4 @@
-export type ConfigType = string | number | Date | IDayjsInstance
+export type ConfigType = string | number | Date | IDayjs
 
 export type OptionType = { locale?: string; format?: string; utc?: boolean } | string
 
@@ -17,79 +17,83 @@ export type UnitType =
 export type OpUnitType = UnitType | 'week' | 'w'
 export type QUnitType = UnitType | 'quarter' | 'Q'
 
-export type PluginFunc<T = unknown> = (option: T, c: IDayjs, d: IDayjs) => void
+export type PluginFunc<T = unknown> = (option: T, c: IDayjsFactory, d: IDayjsFactory) => void
 
-export interface IDayjs {
-  (cfg?: ConfigType): IDayjsInstance
+export interface IDayjsFactory {
+  (cfg?: ConfigType): IDayjs
 
-  unix(t: number): IDayjsInstance
+  unix(t: number): IDayjs
 
-  extend<T = unknown>(plugin: PluginFunc<T>, option?: T): IDayjs
+  extend<T = unknown>(plugin: PluginFunc<T>, option?: T): IDayjsFactory
 
-  locale(preset?: string | ILocale, object?: Partial<ILocale> | null, isLocal?: boolean): string
+  locale(
+    preset?: string | IDayjsLocale,
+    object?: Partial<IDayjsLocale> | null,
+    isLocal?: boolean,
+  ): string
 
-  isDayjs(d: any): d is IDayjsInstance
+  isDayjs(d: any): d is IDayjs
 
   // Plugins are copy-pasted there now:
-  utc(config?: ConfigType, format?: string): IDayjsInstance
+  utc(config?: ConfigType, format?: string): IDayjs
 
-  max(dayjs: IDayjsInstance[]): IDayjsInstance
-  max(...dayjs: IDayjsInstance[]): IDayjsInstance
-  min(dayjs: IDayjsInstance[]): IDayjsInstance
-  min(...dayjs: IDayjsInstance[]): IDayjsInstance
+  max(dayjs: IDayjs[]): IDayjs
+  max(...dayjs: IDayjs[]): IDayjs
+  min(dayjs: IDayjs[]): IDayjs
+  min(...dayjs: IDayjs[]): IDayjs
 
   updateLocale(localeName: string, customConfig: object): any
-  Ls: { [localeName: string]: ILocale }
+  Ls: { [localeName: string]: IDayjsLocale }
 }
 
-export interface IDayjsInstance {
-  clone(): IDayjsInstance
+export interface IDayjs {
+  clone(): IDayjs
 
   isValid(): boolean
 
   year(): number
 
-  year(value: number): IDayjsInstance
+  year(value: number): IDayjs
 
   month(): number
 
-  month(value: number): IDayjsInstance
+  month(value: number): IDayjs
 
   date(): number
 
-  date(value: number): IDayjsInstance
+  date(value: number): IDayjs
 
   day(): number
 
-  day(value: number): IDayjsInstance
+  day(value: number): IDayjs
 
   hour(): number
 
-  hour(value: number): IDayjsInstance
+  hour(value: number): IDayjs
 
   minute(): number
 
-  minute(value: number): IDayjsInstance
+  minute(value: number): IDayjs
 
   second(): number
 
-  second(value: number): IDayjsInstance
+  second(value: number): IDayjs
 
   millisecond(): number
 
-  millisecond(value: number): IDayjsInstance
+  millisecond(value: number): IDayjs
 
-  set(unit: UnitType, value: number): IDayjsInstance
+  set(unit: UnitType, value: number): IDayjs
 
   get(unit: UnitType): number
 
-  add(value: number, unit: OpUnitType): IDayjsInstance
+  add(value: number, unit: OpUnitType): IDayjs
 
-  subtract(value: number, unit: OpUnitType): IDayjsInstance
+  subtract(value: number, unit: OpUnitType): IDayjs
 
-  startOf(unit: OpUnitType): IDayjsInstance
+  startOf(unit: OpUnitType): IDayjs
 
-  endOf(unit: OpUnitType): IDayjsInstance
+  endOf(unit: OpUnitType): IDayjs
 
   format(template?: string): string
 
@@ -112,7 +116,7 @@ export interface IDayjsInstance {
   toString(): string
 
   utcOffset(): number
-  utcOffset(offset: number): IDayjsInstance
+  utcOffset(offset: number): IDayjs
 
   isBefore(date: ConfigType, unit?: OpUnitType): boolean
 
@@ -122,9 +126,9 @@ export interface IDayjsInstance {
 
   locale(): string
 
-  locale(preset: string | ILocale, object?: Partial<ILocale>): IDayjsInstance
+  locale(preset: string | IDayjsLocale, object?: Partial<IDayjsLocale>): IDayjs
 
-  locale(preset?: string | ILocale, object?: Partial<ILocale>, isLocal?: boolean): string
+  locale(preset?: string | IDayjsLocale, object?: Partial<IDayjsLocale>, isLocal?: boolean): string
 
   // default plugin here
   /**
@@ -158,7 +162,7 @@ export interface IDayjsInstance {
   /**
    * Shortcut for .startOf('day')
    */
-  today(): IDayjsInstance
+  today(): IDayjs
 
   // isoWeekDay plugin here
   /**
@@ -189,8 +193,8 @@ export interface IDayjsInstance {
   // isBetween
   isBetween(a: ConfigType, b: ConfigType, c?: OpUnitType | null, d?: string): boolean
 
-  utc(): IDayjsInstance
-  local(): IDayjsInstance
+  utc(): IDayjs
+  local(): IDayjs
   isUTC(): boolean
 
   isSameOrAfter(date: ConfigType, unit?: OpUnitType): boolean
@@ -203,11 +207,11 @@ export interface IDayjsInstance {
   /**
    * Returns internal locale data
    */
-  $locale(): ILocale
-  localeData(): ILocale
+  $locale(): IDayjsLocale
+  localeData(): IDayjsLocale
 }
 
-export interface ILocale {
+export interface IDayjsLocale {
   name: string
   weekdays: string[]
   months: string[] | any // todo

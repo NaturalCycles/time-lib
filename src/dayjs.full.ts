@@ -1,9 +1,9 @@
-const dayjs = require('dayjs') as IDayjs
+const dayjs = require('dayjs') as IDayjsFactory
 
 import { defaultPlugins } from './plugin/default'
 import { isoWeekdayPlugin } from './plugin/isoWeekday'
 import { weekOfYearPlugin } from './plugin/weekOfYear'
-import type { IDayjs } from './types'
+import type { IDayjsFactory } from './types'
 
 dayjs.extend(require('dayjs/plugin/utc'))
 dayjs.extend(require('dayjs/plugin/isSameOrAfter'))

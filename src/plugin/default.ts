@@ -1,4 +1,4 @@
-import type { IDayjsInstance, PluginFunc } from '../types'
+import type { IDayjs, PluginFunc } from '../types'
 
 // todo: fix the interface extension
 
@@ -12,19 +12,19 @@ export const DAYJS_COMPACT_TIME = 'YYYYMMDD_HHmm'
 export const DAYJS_COMPACT_TIME_SECONDS = 'YYYYMMDD_HHmmss'
 
 export const defaultPlugins: PluginFunc = (_opt, dayjsClass, _dayjsFactory) => {
-  dayjsClass.prototype.toISODate = function (this: IDayjsInstance): string {
+  dayjsClass.prototype.toISODate = function (this: IDayjs): string {
     return this.format(DAYJS_ISO_DATE)
   }
 
-  dayjsClass.prototype.toPretty = function (this: IDayjsInstance, seconds = true): string {
+  dayjsClass.prototype.toPretty = function (this: IDayjs, seconds = true): string {
     return this.format(seconds ? DAYJS_PRETTY_TIME : DAYJS_PRETTY_TIME_NO_SECONDS)
   }
 
-  dayjsClass.prototype.toCompactTime = function (this: IDayjsInstance, seconds = false): string {
+  dayjsClass.prototype.toCompactTime = function (this: IDayjs, seconds = false): string {
     return this.format(seconds ? DAYJS_COMPACT_TIME_SECONDS : DAYJS_COMPACT_TIME)
   }
 
-  dayjsClass.prototype.toCompactDate = function (this: IDayjsInstance): string {
+  dayjsClass.prototype.toCompactDate = function (this: IDayjs): string {
     return this.format(DAYJS_COMPACT_DATE)
   }
 
@@ -32,7 +32,7 @@ export const defaultPlugins: PluginFunc = (_opt, dayjsClass, _dayjsFactory) => {
     return this.valueOf()
   }
 
-  dayjsClass.prototype.today = function (this: IDayjsInstance): IDayjsInstance {
+  dayjsClass.prototype.today = function (this: IDayjs): IDayjs {
     return this.startOf('day')
   }
 }
