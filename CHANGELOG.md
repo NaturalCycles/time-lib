@@ -1,3 +1,10 @@
+## [3.0.4](https://github.com/NaturalCycles/time-lib/compare/v3.0.3...v3.0.4) (2020-05-13)
+
+
+### Bug Fixes
+
+* enable "module" again ([7022a25](https://github.com/NaturalCycles/time-lib/commit/7022a257ac7c39b2548f08b74e3a61b98a449169))
+
 ## [3.0.3](https://github.com/NaturalCycles/time-lib/compare/v3.0.2...v3.0.3) (2020-05-11)
 
 
