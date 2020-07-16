@@ -175,6 +175,8 @@ export interface IDayjs {
 
   /**
    * Set date to NEXT date that satisfies the weekday.
+   * Keeps date the same if it matches the desired weekday.
+   * e.g dayjs('2020-07-13').isoWeekday(1) // where 2020-07-13 is already Monday keeps it as Monday
    */
   isoWeekday(setWeekday: number): this
 
