@@ -1,3 +1,10 @@
+## [3.0.5](https://github.com/NaturalCycles/time-lib/compare/v3.0.4...v3.0.5) (2020-07-16)
+
+
+### Bug Fixes
+
+* clarify docs for isoWeekday ([f615a8b](https://github.com/NaturalCycles/time-lib/commit/f615a8b9492fe2f127ec1e4245386cd9121c25d2))
+
 ## [3.0.4](https://github.com/NaturalCycles/time-lib/compare/v3.0.3...v3.0.4) (2020-05-13)
 
 
