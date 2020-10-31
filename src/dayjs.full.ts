@@ -1,4 +1,5 @@
-const dayjs = require('dayjs') as IDayjsFactory
+import dayjsLib = require('dayjs')
+const dayjs: IDayjsFactory = dayjsLib as any
 
 import { defaultPlugins } from './plugin/default'
 import { isoWeekdayPlugin } from './plugin/isoWeekday'
