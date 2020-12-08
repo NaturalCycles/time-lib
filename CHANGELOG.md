@@ -1,3 +1,15 @@
+# [3.1.0](https://github.com/NaturalCycles/time-lib/compare/v3.0.5...v3.1.0) (2020-12-08)
+
+
+### Bug Fixes
+
+* es6-compatible imports (only in tests) ([6589750](https://github.com/NaturalCycles/time-lib/commit/6589750323a753b24df42af407ffbba27dfaa6d6))
+
+
+### Features
+
+* x3 faster .toISODate() implementation ([a3da292](https://github.com/NaturalCycles/time-lib/commit/a3da292fbd7e6c29499687a6f45b2d0fed9aaedf))
+
 ## [3.0.5](https://github.com/NaturalCycles/time-lib/compare/v3.0.4...v3.0.5) (2020-07-16)
 
 
