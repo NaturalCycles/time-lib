@@ -6,3 +6,5 @@
 //     require(`dayjs/locale/${locale}`)
 //   })
 // }
+
+export {}

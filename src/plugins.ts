@@ -8,3 +8,5 @@
 //     dayjs.extend(p)
 //   })
 // }
+
+export {}

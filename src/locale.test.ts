@@ -15,3 +15,5 @@ test('empty', () => {})
 //   // const s = dayjs('2018-05-05').locale('sv').format('LL')
 //   // console.log(s)
 // })
+
+export {}
