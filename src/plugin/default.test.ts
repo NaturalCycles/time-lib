@@ -1,4 +1,5 @@
 import { mockTime, MOCK_TS_2018_06_21 } from '@naturalcycles/dev-lib/dist/testing'
+import { _range } from '@naturalcycles/js-lib'
 import { dayjs } from '../dayjs.full'
 
 const DAYJS_2018_06_21 = dayjs.unix(MOCK_TS_2018_06_21)
@@ -28,6 +29,18 @@ test('toISODate', () => {
   expect(DAYJS_2018_06_21.toISODate()).toBe('2018-06-21')
   expect(dayjs().toISODate()).toBe('2018-06-21')
   expect(dayjs('2017-03-14').toISODate()).toBe('2017-03-14')
+  expect(dayjs('2020-03-05').toISODate()).toBe('2020-03-05')
+
+  // "Interesting" edge case:
+  expect(dayjs('0023-03-14').toISODate()).toBe('1923-03-14')
+
+  // This tests the "fast" .toISODate() implementation vs stock .format implementation
+  const startDate = '1984-06-21'
+  _range(100)
+    .map(i => dayjs(startDate).add(i, 'day').toISODate())
+    .forEach(date => {
+      expect(dayjs(date).toISODate()).toBe(dayjs(date).format('YYYY-MM-DD'))
+    })
 })
 
 test('toPretty', () => {

@@ -13,7 +13,14 @@ export const DAYJS_COMPACT_TIME_SECONDS = 'YYYYMMDD_HHmmss'
 
 export const defaultPlugins: PluginFunc = (_opt, dayjsClass, _dayjsFactory) => {
   dayjsClass.prototype.toISODate = function (this: IDayjs): string {
-    return this.format(DAYJS_ISO_DATE)
+    // return this.format(DAYJS_ISO_DATE)
+    // `format` is fine, but benchmarks show that it's ~3 times slower than "manual" implementation:
+    return `${this.year()}-${String(this.month() + 1).padStart(2, '0')}-${String(
+      this.date(),
+    ).padStart(2, '0')}`
+
+    // The other formats are not "perf-optimized", but you can use your own custom formatter implementations
+    // in your project instead
   }
 
   dayjsClass.prototype.toPretty = function (this: IDayjs, seconds = true): string {

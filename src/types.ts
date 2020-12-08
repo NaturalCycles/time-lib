@@ -21,6 +21,7 @@ export type PluginFunc<T = unknown> = (option: T, c: IDayjsFactory, d: IDayjsFac
 
 export interface IDayjsFactory {
   (cfg?: ConfigType, option?: OptionType, locale?: string): IDayjs
+  (cfg?: ConfigType, option?: OptionType, strict?: boolean): IDayjs
 
   unix(t: number): IDayjs
 
@@ -161,6 +162,7 @@ export interface IDayjs {
 
   /**
    * Shortcut for .startOf('day')
+   * @deprecated, cause it's not a well-defined method. Should be a Factory-method instead.
    */
   today(): IDayjs
 

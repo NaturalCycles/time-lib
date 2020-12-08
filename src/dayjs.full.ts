@@ -1,4 +1,5 @@
-import dayjsLib = require('dayjs')
+// import dayjsLib = require('dayjs')
+const dayjsLib = require('dayjs')
 const dayjs: IDayjsFactory = dayjsLib as any
 
 import { defaultPlugins } from './plugin/default'
