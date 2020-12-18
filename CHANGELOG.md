@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/NaturalCycles/time-lib/compare/v3.1.0...v3.2.0) (2020-12-18)
+
+
+### Features
+
+* .week() plugin for arabic week (dow=6, doy=12) ([939e3b7](https://github.com/NaturalCycles/time-lib/commit/939e3b7954691ad603cc485ff5298e9e4b6b3803))
+
 # [3.1.0](https://github.com/NaturalCycles/time-lib/compare/v3.0.5...v3.1.0) (2020-12-08)
 
 
