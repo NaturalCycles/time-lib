@@ -19,6 +19,7 @@ dayjs.extend(require('dayjs/plugin/updateLocale'))
 dayjs.extend(defaultPlugins)
 dayjs.extend(isoWeekdayPlugin)
 dayjs.extend(weekOfYearPlugin)
+// dayjs.extend(require('dayjs/plugin/weekOfYear'))
 
 // Set en-gb by default, to have e.g Monday as fdow
 require(`dayjs/locale/en-gb`)

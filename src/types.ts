@@ -220,6 +220,7 @@ export interface IDayjsLocale {
   weekdays: string[]
   months: string[] | any // todo
   weekStart?: number
+  yearStart?: number
   weekdaysShort?: string[]
   monthsShort?: string[]
   weekdaysMin?: string[]
