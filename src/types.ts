@@ -43,7 +43,7 @@ export interface IDayjsFactory {
   min(dayjs: IDayjs[]): IDayjs
   min(...dayjs: IDayjs[]): IDayjs
 
-  updateLocale(localeName: string, customConfig: object): any
+  updateLocale(localeName: string, customConfig: Record<string, any>): any
   Ls: { [localeName: string]: IDayjsLocale }
 }
 
@@ -140,6 +140,7 @@ export interface IDayjs {
   /**
    * Returns e.g `2018-06-21 17:54:21`
    * or `2018-06-21 17:54` (with seconds=false)
+   *
    * @param seconds defauls to true
    */
   toPretty(seconds?: boolean): string
@@ -162,6 +163,7 @@ export interface IDayjs {
 
   /**
    * Shortcut for .startOf('day')
+   *
    * @deprecated, cause it's not a well-defined method. Should be a Factory-method instead.
    */
   today(): IDayjs
