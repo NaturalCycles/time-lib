@@ -1,3 +1,10 @@
+## [3.2.1](https://github.com/NaturalCycles/time-lib/compare/v3.2.0...v3.2.1) (2021-05-26)
+
+
+### Bug Fixes
+
+* deps ([85f90a6](https://github.com/NaturalCycles/time-lib/commit/85f90a6b4931ee0e803a9ce9cba269dd215510e9))
+
 # [3.2.0](https://github.com/NaturalCycles/time-lib/compare/v3.1.0...v3.2.0) (2020-12-18)
 
 
