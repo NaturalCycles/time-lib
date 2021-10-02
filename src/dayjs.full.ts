@@ -1,28 +1,37 @@
-// import dayjsLib = require('dayjs')
-const dayjsLib = require('dayjs')
-const dayjs: IDayjsFactory = dayjsLib
+import * as dayjsLib from 'dayjs'
+// const dayjsLib = require('dayjs')
+const dayjs: IDayjsFactory = dayjsLib as any
 
 import { defaultPlugins } from './plugin/default'
 import { isoWeekdayPlugin } from './plugin/isoWeekday'
 import { weekOfYearPlugin } from './plugin/weekOfYear'
 import type { IDayjsFactory } from './types'
 
-dayjs.extend(require('dayjs/plugin/utc'))
-dayjs.extend(require('dayjs/plugin/isSameOrAfter'))
-dayjs.extend(require('dayjs/plugin/isSameOrBefore'))
-dayjs.extend(require('dayjs/plugin/relativeTime'))
-dayjs.extend(require('dayjs/plugin/isBetween'))
-dayjs.extend(require('dayjs/plugin/minMax'))
-dayjs.extend(require('dayjs/plugin/localizedFormat'))
-dayjs.extend(require('dayjs/plugin/localeData'))
-dayjs.extend(require('dayjs/plugin/updateLocale'))
+import * as isBetween from 'dayjs/plugin/isBetween'
+import * as isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
+import * as isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
+import * as localeData from 'dayjs/plugin/localeData'
+import * as localizedFormat from 'dayjs/plugin/localizedFormat'
+import * as minMax from 'dayjs/plugin/minMax'
+import * as relativeTime from 'dayjs/plugin/relativeTime'
+import * as updateLocale from 'dayjs/plugin/updateLocale'
+import * as utc from 'dayjs/plugin/utc'
+dayjsLib.extend(utc)
+dayjsLib.extend(isSameOrAfter)
+dayjsLib.extend(isSameOrBefore)
+dayjsLib.extend(relativeTime)
+dayjsLib.extend(isBetween)
+dayjsLib.extend(minMax)
+dayjsLib.extend(localizedFormat)
+dayjsLib.extend(localeData)
+dayjsLib.extend(updateLocale)
 dayjs.extend(defaultPlugins)
 dayjs.extend(isoWeekdayPlugin)
 dayjs.extend(weekOfYearPlugin)
 // dayjs.extend(require('dayjs/plugin/weekOfYear'))
 
 // Set en-gb by default, to have e.g Monday as fdow
-require(`dayjs/locale/en-gb`)
-dayjs.locale('en-gb')
+import * as enGB from 'dayjs/locale/en-gb'
+dayjsLib.locale(enGB)
 
 export { dayjs }
