@@ -23,6 +23,18 @@ runScript(async () => {
         const _parsed = dates.map(d => dayjs(d, 'YYYY-MM-DD', true))
         done.resolve()
       },
+      manual: done => {
+        const _parsed = dates.map(d => {
+          const a = /^\d{4}-\d{2}-\d{2}$/.exec(d) as any
+          // const y = Number(d.substr(0, 4))
+          // const m = Number(d.substr(5, 2)) - 1
+          // const day = Number(d.substr(8, 2))
+
+          // return dayjs(new Date(y!, m! - 1, day))
+          return dayjs(new Date(a[0], a[1] - 1, a[2]))
+        })
+        done.resolve()
+      },
     },
     // writeSummary: true,
     runs: 2,

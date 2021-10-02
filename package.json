@@ -1,6 +1,7 @@
 {
   "name": "@naturalcycles/time-lib",
   "scripts": {
+    "prepare": "husky install",
     "build-prod": "build-prod-esm-cjs"
   },
   "dependencies": {
@@ -8,10 +9,10 @@
   },
   "devDependencies": {
     "@naturalcycles/bench-lib": "^1.0.4",
-    "@naturalcycles/dev-lib": "^11.0.7",
+    "@naturalcycles/dev-lib": "^12.6.0",
     "@naturalcycles/js-lib": "^14.6.1",
     "@naturalcycles/nodejs-lib": "^12.11.3",
-    "@types/node": "^15.6.1",
+    "@types/node": "^16.10.2",
     "jest": "^27.0.1",
     "moment": "^2.24.0"
   },
