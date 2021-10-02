@@ -1,3 +1,10 @@
+# [3.3.0](https://github.com/NaturalCycles/time-lib/compare/v3.2.1...v3.3.0) (2021-10-02)
+
+
+### Features
+
+* replace `require` with `import` ([ff598be](https://github.com/NaturalCycles/time-lib/commit/ff598becc83957d164d7657fb9afddc84cfa48cc))
+
 ## [3.2.1](https://github.com/NaturalCycles/time-lib/compare/v3.2.0...v3.2.1) (2021-05-26)
 
 
