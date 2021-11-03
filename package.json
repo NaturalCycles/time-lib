@@ -39,7 +39,7 @@
     "url": "https://github.com/NaturalCycles/time-lib"
   },
   "engines": {
-    "node": ">=10.13"
+    "node": ">=14.15.0"
   },
   "version": "3.3.0",
   "description": "Date/time related API, based on Day.js",

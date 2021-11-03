@@ -23,10 +23,3 @@
 # API
 
 TODO
-
-# Packaging
-
-- `engines.node >= 10.13`: Latest Node.js LTS
-- `main: dist/index.js`: commonjs, es2015
-- `types: dist/index.d.ts`: typescript types
-- `/src` folder with source `*.ts` files included
