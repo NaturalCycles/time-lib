@@ -4,32 +4,29 @@ yarn tsn benchConversion
 
  */
 
-import { runBench } from '@naturalcycles/bench-lib'
-import { _range } from '@naturalcycles/js-lib'
-import { runScript } from '@naturalcycles/nodejs-lib/dist/script'
+import { runBenchScript } from '@naturalcycles/bench-lib'
 import { dayjs } from '../src'
 
 const dateStr = '1984-06-21'
 const date = dayjs(dateStr)
 
-runScript(async () => {
-  const r = await runBench({
-    fns: {
-      withString: done => {
-        const _days = _range(100).map(() => dayjs.utc(date.toISODate()))
-        done.resolve()
-      },
-      withoutString: done => {
-        const _days = _range(100).map(() => dayjs.utc(date))
-        done.resolve()
-      },
-      withStringBeforeToISODateOptimization: done => {
-        const _days = _range(100).map(() => dayjs.utc(date.format('YYYY-MM-DD')))
-        done.resolve()
-      },
+runBenchScript({
+  fns: {
+    withString: done => {
+      // const _days = _range(100).map(() => dayjs.utc(date.toISODate()))
+      const _day = dayjs.utc(date.toISODate())
+      done.resolve()
     },
-    writeSummary: true,
-    runs: 2,
-  })
-  console.log(r)
+    withoutString: done => {
+      // const _days = _range(100).map(() => dayjs.utc(date))
+      const _day = dayjs.utc(date)
+      done.resolve()
+    },
+    withStringBeforeToISODateOptimization: done => {
+      // const _days = _range(100).map(() => dayjs.utc(date.format('YYYY-MM-DD')))
+      const _day = dayjs.utc(date.format('YYYY-MM-DD'))
+      done.resolve()
+    },
+  },
+  runs: 2,
 })
