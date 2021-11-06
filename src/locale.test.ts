@@ -1,4 +1,4 @@
-test('empty', () => {})
+import { dayjs } from './dayjs.full'
 
 // test('locale support', () => {
 //   // Before locale is loaded
@@ -15,5 +15,34 @@ test('empty', () => {})
 //   // const s = dayjs('2018-05-05').locale('sv').format('LL')
 //   // console.log(s)
 // })
+
+test('fdow of default locale should be Monday', () => {
+  // const ld = dayjs().localeData()
+  // console.log(ld.firstDayOfWeek())
+  // console.log(dayjs().$locale())
+
+  // This is "raw" locale output
+  expect(dayjs().$locale()).toMatchObject({
+    name: 'en-gb',
+    weekStart: 1,
+    yearStart: 4,
+  })
+
+  expect(dayjs().locale()).toBe('en-gb')
+
+  expect(dayjs().localeData().firstDayOfWeek()).toBe(1)
+
+  expect(dayjs().localeData().weekdays()).toMatchInlineSnapshot(`
+    Array [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ]
+  `)
+})
 
 export {}

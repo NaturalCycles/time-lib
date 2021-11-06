@@ -2,8 +2,6 @@ import * as dayjsLib from 'dayjs'
 // const dayjsLib = require('dayjs')
 const dayjs: IDayjsFactory = dayjsLib as any
 
-import * as enGB from 'dayjs/locale/en-gb'
-
 import * as isBetween from 'dayjs/plugin/isBetween'
 import * as isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
 import * as isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
@@ -13,6 +11,7 @@ import * as minMax from 'dayjs/plugin/minMax'
 import * as relativeTime from 'dayjs/plugin/relativeTime'
 import * as updateLocale from 'dayjs/plugin/updateLocale'
 import * as utc from 'dayjs/plugin/utc'
+import { enGB } from './enGB'
 import { defaultPlugins } from './plugin/default'
 import { isoWeekdayPlugin } from './plugin/isoWeekday'
 import { weekOfYearPlugin } from './plugin/weekOfYear'
@@ -32,6 +31,9 @@ dayjs.extend(weekOfYearPlugin)
 // dayjs.extend(require('dayjs/plugin/weekOfYear'))
 
 // Set en-gb by default, to have e.g Monday as fdow
-dayjsLib.locale(enGB)
+// This "loads" the locale:
+dayjs.locale(enGB, null, true)
+// This sets en-gb as default:
+dayjs.locale('en-gb')
 
 export { dayjs }

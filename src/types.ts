@@ -19,6 +19,22 @@ export type QUnitType = UnitType | 'quarter' | 'Q'
 
 export type PluginFunc<T = unknown> = (option: T, c: IDayjsFactory, d: IDayjsFactory) => void
 
+export type WeekdayNames = [string, string, string, string, string, string, string]
+export type MonthNames = [
+  string,
+  string,
+  string,
+  string,
+  string,
+  string,
+  string,
+  string,
+  string,
+  string,
+  string,
+  string,
+]
+
 export interface IDayjsFactory {
   (cfg?: ConfigType, option?: OptionType, locale?: string): IDayjs
   (cfg?: ConfigType, option?: OptionType, strict?: boolean): IDayjs
@@ -214,7 +230,7 @@ export interface IDayjs {
    * Returns internal locale data
    */
   $locale(): IDayjsLocale
-  localeData(): IDayjsLocale
+  localeData(): GlobalLocaleDataReturn
 }
 
 export interface IDayjsLocale {
@@ -262,4 +278,15 @@ export interface RelativeTimeThreshold {
 export interface RelativeTimeOptions {
   rounding?: (num: number) => number
   thresholds?: RelativeTimeThreshold[]
+}
+
+export interface GlobalLocaleDataReturn {
+  firstDayOfWeek(): number
+  weekdays(): WeekdayNames
+  weekdaysShort(): WeekdayNames
+  weekdaysMin(): WeekdayNames
+  months(): MonthNames
+  monthsShort(): MonthNames
+  longDateFormat(format: string): string
+  meridiem(hour?: number, minute?: number, isLower?: boolean): string
 }
