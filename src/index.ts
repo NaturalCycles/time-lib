@@ -15,7 +15,7 @@ import {
   OpUnitType,
   GlobalLocaleDataReturn,
 } from './types'
-import { dayjsRange, dayjsRangeIncl, dayjsRangeInclISODate, dayjsRangeISODate } from './dayjsRange'
+export * from './dayjsRange'
 
 export type { IDayjsFactory, IDayjs, IDayjsLocale, ConfigType, OpUnitType, GlobalLocaleDataReturn }
 
@@ -27,10 +27,6 @@ export {
   DAYJS_COMPACT_DATE,
   DAYJS_COMPACT_TIME,
   DAYJS_COMPACT_TIME_SECONDS,
-  dayjsRange,
-  dayjsRangeIncl,
-  dayjsRangeInclISODate,
-  dayjsRangeISODate,
   // loadDayjsLocales,
   // loadDayjsPlugins,
 }

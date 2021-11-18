@@ -1,4 +1,13 @@
-import { dayjsRange, dayjsRangeInclISODate, dayjsRangeISODate } from './dayjsRange'
+import { _shuffle } from '@naturalcycles/js-lib'
+import {
+  dayjsEarliest,
+  dayjsLatest,
+  dayjsRange,
+  dayjsRangeIncl,
+  dayjsRangeInclISODate,
+  dayjsRangeISODate,
+  dayjsRangeSeq,
+} from './dayjsRange'
 
 test('dayjsRange', () => {
   expect(dayjsRangeISODate('2021-12-24', '2021-12-26')).toMatchInlineSnapshot(`
@@ -50,4 +59,18 @@ test('dayjsRange', () => {
       "2021-12-25 20:00",
     ]
   `)
+})
+
+test('dayjsEarliest, dayjsLatest', () => {
+  const dates = _shuffle(dayjsRangeIncl('2021-01-01', '2021-01-05', 2, 'd'))
+  expect(dayjsEarliest(...dates).toISODate()).toBe('2021-01-01')
+  expect(dayjsLatest(...dates).toISODate()).toBe('2021-01-05')
+
+  expect(() => dayjsEarliest()).toThrow()
+  expect(() => dayjsLatest()).toThrow()
+})
+
+test('dayjsRangeSeq', () => {
+  const d = dayjsRangeSeq('2021-01-01', '2022-01-01').find(d => d.month() === 1)
+  expect(d?.toISODate()).toBe('2021-02-01')
 })

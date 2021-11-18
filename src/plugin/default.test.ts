@@ -13,6 +13,7 @@ test('dayjs', () => {
   expect(now).toBeInstanceOf(dayjs)
   expect(now.toDate().toISOString()).toBe('2018-06-21T00:00:00.000Z')
   expect(DAYJS_2018_06_21.toDate().toISOString()).toBe('2018-06-21T00:00:00.000Z')
+  expect(now.format()).toBe('2018-06-21T00:00:00+00:00')
   expect(now.toJSON()).toBe('2018-06-21T00:00:00.000Z')
   expect(now.unix()).toBe(MOCK_TS_2018_06_21)
   expect(now.valueOf()).toBe(MOCK_TS_2018_06_21 * 1000)

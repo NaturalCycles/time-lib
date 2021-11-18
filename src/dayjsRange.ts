@@ -1,5 +1,5 @@
-import { IsoDate } from '@naturalcycles/js-lib'
-import { dayjs, ConfigType, IDayjs, OpUnitType } from './index'
+import { END, IsoDate, Seq } from '@naturalcycles/js-lib'
+import { ConfigType, dayjs, IDayjs, OpUnitType } from './index'
 
 /**
  * Like _range, but for IDayjs.
@@ -23,6 +23,35 @@ export function dayjsRange(
 
   return days
 }
+
+export function dayjsRangeSeq(
+  minIncl: ConfigType,
+  maxExcl: ConfigType,
+  step = 1,
+  stepUnit: OpUnitType = 'd',
+): Seq<IDayjs> {
+  const min = dayjs(minIncl).startOf(stepUnit)
+  const max = dayjs(maxExcl).startOf(stepUnit)
+  return Seq.create(min, d => {
+    const next = d.add(step, stepUnit)
+    return next.isAfter(max) ? END : next
+  })
+}
+
+// todo: this would require Seq.map() implementation
+// export function dayjsRangeISODateSeq(
+//   minIncl: ConfigType,
+//   maxExcl: ConfigType,
+//   step = 1,
+//   stepUnit: OpUnitType = 'd',
+// ): Seq<string> {
+//   const min = dayjs(minIncl).startOf(stepUnit)
+//   const max = dayjs(maxExcl).startOf(stepUnit)
+//   return Seq.create(min, d => {
+//     const next = d.add(step, stepUnit)
+//     return next.isAfter(max) ? END : next
+//   })
+// }
 
 export function dayjsRangeISODate(
   minIncl: ConfigType,
@@ -53,4 +82,20 @@ export function dayjsRangeInclISODate(
   stepUnit: OpUnitType = 'd',
 ): IsoDate[] {
   return dayjsRangeIncl(minIncl, maxIncl, step, stepUnit).map(d => d.toISODate())
+}
+
+/**
+ * Input must contain at least 1 item.
+ */
+export function dayjsEarliest(...days: IDayjs[]): IDayjs {
+  // eslint-disable-next-line unicorn/no-array-reduce
+  return days.reduce((earliest, d) => (d.isBefore(earliest) ? d : earliest))
+}
+
+/**
+ * Input must contain at least 1 item.
+ */
+export function dayjsLatest(...days: IDayjs[]): IDayjs {
+  // eslint-disable-next-line unicorn/no-array-reduce
+  return days.reduce((latest, d) => (d.isAfter(latest) ? d : latest))
 }
