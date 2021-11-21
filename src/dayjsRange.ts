@@ -1,4 +1,4 @@
-import { END, IsoDate, Seq } from '@naturalcycles/js-lib'
+import { END, IsoDate, Sequence } from '@naturalcycles/js-lib'
 import { ConfigType, dayjs, IDayjs, OpUnitType } from './index'
 
 /**
@@ -29,10 +29,10 @@ export function dayjsRangeSeq(
   maxExcl: ConfigType,
   step = 1,
   stepUnit: OpUnitType = 'd',
-): Seq<IDayjs> {
+): Sequence<IDayjs> {
   const min = dayjs(minIncl).startOf(stepUnit)
   const max = dayjs(maxExcl).startOf(stepUnit)
-  return Seq.create(min, d => {
+  return Sequence.create(min, d => {
     const next = d.add(step, stepUnit)
     return next.isAfter(max) ? END : next
   })
