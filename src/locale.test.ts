@@ -33,7 +33,7 @@ test('fdow of default locale should be Monday', () => {
   expect(dayjs().localeData().firstDayOfWeek()).toBe(1)
 
   expect(dayjs().localeData().weekdays()).toMatchInlineSnapshot(`
-    Array [
+    [
       "Sunday",
       "Monday",
       "Tuesday",

@@ -39,119 +39,98 @@ export interface IDayjsFactory {
   (cfg?: ConfigType, option?: OptionType, locale?: string): IDayjs
   (cfg?: ConfigType, option?: OptionType, strict?: boolean): IDayjs
 
-  unix(t: number): IDayjs
+  unix: (t: number) => IDayjs
 
-  extend<T = unknown>(plugin: PluginFunc<T>, option?: T): IDayjsFactory
+  extend: <T = unknown>(plugin: PluginFunc<T>, option?: T) => IDayjsFactory
 
-  locale(
+  locale: (
     preset?: string | IDayjsLocale,
     object?: Partial<IDayjsLocale> | null,
     isLocal?: boolean,
-  ): string
+  ) => string
 
-  isDayjs(d: any): d is IDayjs
+  isDayjs: (d: any) => d is IDayjs
 
   // Plugins are copy-pasted there now:
-  utc(config?: ConfigType, format?: string): IDayjs
+  utc: (config?: ConfigType, format?: string) => IDayjs
 
-  max(dayjs: IDayjs[]): IDayjs
-  max(...dayjs: IDayjs[]): IDayjs
-  min(dayjs: IDayjs[]): IDayjs
-  min(...dayjs: IDayjs[]): IDayjs
+  max: ((dayjs: IDayjs[]) => IDayjs) & ((...dayjs: IDayjs[]) => IDayjs)
+  min: ((dayjs: IDayjs[]) => IDayjs) & ((...dayjs: IDayjs[]) => IDayjs)
 
-  updateLocale(localeName: string, customConfig: Record<string, any>): any
+  updateLocale: (localeName: string, customConfig: Record<string, any>) => any
   Ls: { [localeName: string]: IDayjsLocale }
 }
 
 export interface IDayjs {
-  clone(): IDayjs
+  clone: () => IDayjs
 
-  isValid(): boolean
+  isValid: () => boolean
 
-  year(): number
+  year: (() => number) & ((value: number) => IDayjs)
 
-  year(value: number): IDayjs
+  month: (() => number) & ((value: number) => IDayjs)
 
-  month(): number
+  date: (() => number) & ((value: number) => IDayjs)
 
-  month(value: number): IDayjs
+  day: (() => number) & ((value: number) => IDayjs)
 
-  date(): number
+  hour: (() => number) & ((value: number) => IDayjs)
 
-  date(value: number): IDayjs
+  minute: (() => number) & ((value: number) => IDayjs)
 
-  day(): number
+  second: (() => number) & ((value: number) => IDayjs)
 
-  day(value: number): IDayjs
+  millisecond: (() => number) & ((value: number) => IDayjs)
 
-  hour(): number
+  set: (unit: UnitType, value: number) => IDayjs
 
-  hour(value: number): IDayjs
+  get: (unit: UnitType) => number
 
-  minute(): number
+  add: (value: number, unit: OpUnitType) => IDayjs
 
-  minute(value: number): IDayjs
+  subtract: (value: number, unit: OpUnitType) => IDayjs
 
-  second(): number
+  startOf: (unit: OpUnitType) => IDayjs
 
-  second(value: number): IDayjs
+  endOf: (unit: OpUnitType) => IDayjs
 
-  millisecond(): number
+  format: (template?: string) => string
 
-  millisecond(value: number): IDayjs
-
-  set(unit: UnitType, value: number): IDayjs
-
-  get(unit: UnitType): number
-
-  add(value: number, unit: OpUnitType): IDayjs
-
-  subtract(value: number, unit: OpUnitType): IDayjs
-
-  startOf(unit: OpUnitType): IDayjs
-
-  endOf(unit: OpUnitType): IDayjs
-
-  format(template?: string): string
-
-  diff(date: ConfigType, unit?: QUnitType | OpUnitType, float?: boolean): number
+  diff: (date: ConfigType, unit?: QUnitType | OpUnitType, float?: boolean) => number
 
   // Forbid the method in favor of .unixMillis()
   // valueOf(): number
 
-  unix(): number
+  unix: () => number
 
-  daysInMonth(): number
+  daysInMonth: () => number
 
-  toDate(): Date
+  toDate: () => Date
 
-  toJSON(): string
+  toJSON: () => string
 
   // Forbid the method in favor of .toISODate()
   // toISOString(): string
 
-  toString(): string
+  toString: () => string
 
-  utcOffset(): number
-  utcOffset(offset: number): IDayjs
+  utcOffset: (() => number) & ((offset: number) => IDayjs)
 
-  isBefore(date: ConfigType, unit?: OpUnitType): boolean
+  isBefore: (date: ConfigType, unit?: OpUnitType) => boolean
 
-  isSame(date: ConfigType, unit?: OpUnitType): boolean
+  isSame: (date: ConfigType, unit?: OpUnitType) => boolean
 
-  isAfter(date: ConfigType, unit?: OpUnitType): boolean
+  isAfter: (date: ConfigType, unit?: OpUnitType) => boolean
 
-  locale(): string
-
-  locale(preset: string | IDayjsLocale, object?: Partial<IDayjsLocale>): IDayjs
-
-  locale(preset?: string | IDayjsLocale, object?: Partial<IDayjsLocale>, isLocal?: boolean): string
+  locale: (() => string) &
+    ((preset: string | IDayjsLocale, object?: Partial<IDayjsLocale>) => IDayjs) &
+    ((preset?: string | IDayjsLocale, object?: Partial<IDayjsLocale>, isLocal?: boolean) => string)
 
   // default plugin here
   /**
    * Returns ISO date, e.g `2018-06-21`
    */
-  toISODate(): string
+  toISODate: () => string
 
   /**
    * Returns e.g `2018-06-21 17:54:21`
@@ -159,30 +138,30 @@ export interface IDayjs {
    *
    * @param seconds defauls to true
    */
-  toPretty(seconds?: boolean): string
+  toPretty: (seconds?: boolean) => string
 
   /**
    * Returns e.g `20180621_1754` or `20180621_175404` (with seconds).
    * seconds @default to false
    */
-  toCompactTime(seconds?: boolean): string
+  toCompactTime: (seconds?: boolean) => string
 
   /**
    * Returns e.g `20180621`
    */
-  toCompactDate(): string
+  toCompactDate: () => string
 
   /**
    * Returns unixtime in milliseconds.
    */
-  unixMillis(): number
+  unixMillis: () => number
 
   /**
    * Shortcut for .startOf('day')
    *
    * @deprecated, cause it's not a well-defined method. Should be a Factory-method instead.
    */
-  today(): IDayjs
+  today: () => IDayjs
 
   // isoWeekDay plugin here
   /**
@@ -191,20 +170,13 @@ export interface IDayjs {
    * 6: Saturday
    * 7: Sunday
    */
-  isoWeekday(): number
-
-  /**
-   * Set date to NEXT date that satisfies the weekday.
-   * Keeps date the same if it matches the desired weekday.
-   * e.g dayjs('2020-07-13').isoWeekday(1) // where 2020-07-13 is already Monday keeps it as Monday
-   */
-  isoWeekday(setWeekday: number): this
+  isoWeekday: (() => number) & ((setWeekday: number) => this)
 
   // weekOfYear plugin here
   /**
    * Returns iso week number (where week starts on Monday)
    */
-  week(): number
+  week: () => number
 
   /**
    * Set date to NEXT date that satisfies the week number.
@@ -213,24 +185,24 @@ export interface IDayjs {
 
   // copy-pasting plugin types here for now
   // isBetween
-  isBetween(a: ConfigType, b: ConfigType, c?: OpUnitType | null, d?: string): boolean
+  isBetween: (a: ConfigType, b: ConfigType, c?: OpUnitType | null, d?: string) => boolean
 
-  utc(): IDayjs
-  local(): IDayjs
-  isUTC(): boolean
+  utc: () => IDayjs
+  local: () => IDayjs
+  isUTC: () => boolean
 
-  isSameOrAfter(date: ConfigType, unit?: OpUnitType): boolean
-  isSameOrBefore(date: ConfigType, unit?: OpUnitType): boolean
+  isSameOrAfter: (date: ConfigType, unit?: OpUnitType) => boolean
+  isSameOrBefore: (date: ConfigType, unit?: OpUnitType) => boolean
 
-  fromNow(withoutSuffix?: boolean): string
-  from(compared: ConfigType, withoutSuffix?: boolean): string
-  toNow(withoutSuffix?: boolean): string
-  to(compared: ConfigType, withoutSuffix?: boolean): string
+  fromNow: (withoutSuffix?: boolean) => string
+  from: (compared: ConfigType, withoutSuffix?: boolean) => string
+  toNow: (withoutSuffix?: boolean) => string
+  to: (compared: ConfigType, withoutSuffix?: boolean) => string
   /**
    * Returns internal locale data
    */
-  $locale(): IDayjsLocale
-  localeData(): GlobalLocaleDataReturn
+  $locale: () => IDayjsLocale
+  localeData: () => GlobalLocaleDataReturn
 }
 
 export interface IDayjsLocale {
@@ -281,12 +253,12 @@ export interface RelativeTimeOptions {
 }
 
 export interface GlobalLocaleDataReturn {
-  firstDayOfWeek(): number
-  weekdays(): WeekdayNames
-  weekdaysShort(): WeekdayNames
-  weekdaysMin(): WeekdayNames
-  months(): MonthNames
-  monthsShort(): MonthNames
-  longDateFormat(format: string): string
-  meridiem(hour?: number, minute?: number, isLower?: boolean): string
+  firstDayOfWeek: () => number
+  weekdays: () => WeekdayNames
+  weekdaysShort: () => WeekdayNames
+  weekdaysMin: () => WeekdayNames
+  months: () => MonthNames
+  monthsShort: () => MonthNames
+  longDateFormat: (format: string) => string
+  meridiem: (hour?: number, minute?: number, isLower?: boolean) => string
 }

@@ -1,4 +1,4 @@
-import { END, IsoDate, Sequence } from '@naturalcycles/js-lib'
+import { END, IsoDateString, Sequence } from '@naturalcycles/js-lib'
 import { ConfigType, dayjs, IDayjs, OpUnitType } from './index'
 
 /**
@@ -58,7 +58,7 @@ export function dayjsRangeISODate(
   maxExcl: ConfigType,
   step = 1,
   stepUnit: OpUnitType = 'd',
-): IsoDate[] {
+): IsoDateString[] {
   return dayjsRange(minIncl, maxExcl, step, stepUnit).map(d => d.toISODate())
 }
 
@@ -80,7 +80,7 @@ export function dayjsRangeInclISODate(
   maxIncl: ConfigType,
   step = 1,
   stepUnit: OpUnitType = 'd',
-): IsoDate[] {
+): IsoDateString[] {
   return dayjsRangeIncl(minIncl, maxIncl, step, stepUnit).map(d => d.toISODate())
 }
 
