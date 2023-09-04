@@ -6,7 +6,7 @@ yarn tsn numberToISODate.bench
 
 import { runBench } from '@naturalcycles/bench-lib'
 import { _range } from '@naturalcycles/js-lib'
-import { runScript } from '@naturalcycles/nodejs-lib/dist/script'
+import { runScript } from '@naturalcycles/nodejs-lib'
 import { dayjs } from '../src/index'
 
 const date = '1984-06-21'
