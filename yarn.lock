@@ -871,10 +871,10 @@
     typescript "^5.0.2"
     yargs "^17.0.0"
 
-"@naturalcycles/js-lib@^14.0.0", "@naturalcycles/js-lib@^14.6.1":
-  version "14.149.1"
-  resolved "https://registry.yarnpkg.com/@naturalcycles/js-lib/-/js-lib-14.149.1.tgz#300194a32a53ec0d2ff6600e9042d24d4305e27d"
-  integrity sha512-bR4P8jn3UHVsreFRcwplY9RtwIipGeeB2Qy1XUkXrsboSPHU4Dq4JzKXCKKsF2SV8b4UJEbinw7/4d0bItuXDQ==
+"@naturalcycles/js-lib@^14.0.0", "@naturalcycles/js-lib@^14.192.0":
+  version "14.192.0"
+  resolved "https://registry.yarnpkg.com/@naturalcycles/js-lib/-/js-lib-14.192.0.tgz#ce3c47fc2e43e069ccc0a4a8c509177685151f9b"
+  integrity sha512-JJU9Ky8yYrUZVafp1//NKxwOrOh8DYOEuWEaE2WZzgIapITopHdovFso8+E5hMHtyWtxJ9U1LeIL1J3Cter7sg==
   dependencies:
     tslib "^2.0.0"
     zod "^3.20.2"

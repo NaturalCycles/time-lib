@@ -1,6 +1,7 @@
 {
   "extends": "@naturalcycles/dev-lib/cfg/tsconfig.json",
   "compilerOptions": {
+    "skipLibCheck": true,
     "sourceMap": true,
     "module": "commonjs",
     "moduleResolution": "node",

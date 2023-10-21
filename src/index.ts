@@ -15,7 +15,6 @@ import {
   OpUnitType,
   GlobalLocaleDataReturn,
 } from './types'
-export * from './dayjsRange'
 
 export type { IDayjsFactory, IDayjs, IDayjsLocale, ConfigType, OpUnitType, GlobalLocaleDataReturn }
 
